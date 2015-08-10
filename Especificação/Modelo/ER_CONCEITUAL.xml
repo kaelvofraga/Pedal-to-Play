@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <MER>
 	<Informacoes>
-		<Posicao Left="0" Top="134"/>
+		<Posicao Left="0" Top="67"/>
 		<TotalItens Valor="140"/>
 		<Tipo Valor="CONCEITUAL"/>
 		<Versao Valor="2.0.0"/>
@@ -116,8 +116,8 @@
       <Fonte default="-1"/>
       <Atributos>
         <Atributo nome="data_inscricao" id="57">
-          <Left Valor="147"/>
-          <Top Valor="184"/>
+          <Left Valor="148"/>
+          <Top Valor="167"/>
           <Width Valor="110"/>
           <Height Valor="16"/>
           <Fonte default="-1"/>
@@ -148,8 +148,8 @@
           </Ligacoes>
         </Atributo>
         <Atributo nome="email" id="21">
-          <Left Valor="201"/>
-          <Top Valor="87"/>
+          <Left Valor="200"/>
+          <Top Valor="93"/>
           <Width Valor="58"/>
           <Height Valor="16"/>
           <Fonte default="-1"/>
@@ -179,41 +179,9 @@
             </Ligacao>
           </Ligacoes>
         </Atributo>
-        <Atributo nome="level" id="15">
-          <Left Valor="205"/>
-          <Top Valor="144"/>
-          <Width Valor="54"/>
-          <Height Valor="16"/>
-          <Fonte default="-1"/>
-          <Atributos/>
-          <AtributosOcultos/>
-          <Dicionario></Dicionario>
-          <Nula Valor="0"/>
-          <Observacao></Observacao>
-          <Futuro></Futuro>
-          <Anexos/>
-          <MaxCard Valor="1"/>
-          <MinCard Valor="1"/>
-          <Composto Valor="0"/>
-          <Identificador Valor="0"/>
-          <Tipo Valor="int"/>
-          <Multivalorado Valor="0"/>
-          <Orientacao Valor="2"/>
-          <TamAuto Valor="-1"/>
-          <Desvio Valor="10"/>
-          <BarraID Valor="16"/>
-          <Ligacoes>
-            <Ligacao Destino_ID="1">
-              <MostraCardinalidade Valor="0" Card_id="17"/>
-              <Cardinalidades Cardinalidade="4"/>
-              <Orientacao Valor="0"/>
-              <Fraca Valor="0"/>
-            </Ligacao>
-          </Ligacoes>
-        </Atributo>
         <Atributo nome="nome" id="9">
-          <Left Valor="201"/>
-          <Top Valor="124"/>
+          <Left Valor="199"/>
+          <Top Valor="131"/>
           <Width Valor="59"/>
           <Height Valor="16"/>
           <Fonte default="-1"/>
@@ -244,8 +212,8 @@
           </Ligacoes>
         </Atributo>
         <Atributo nome="peso" id="54">
-          <Left Valor="205"/>
-          <Top Valor="163"/>
+          <Left Valor="204"/>
+          <Top Valor="150"/>
           <Width Valor="54"/>
           <Height Valor="16"/>
           <Fonte default="-1"/>
@@ -277,7 +245,7 @@
         </Atributo>
         <Atributo nome="senha" id="12">
           <Left Valor="198"/>
-          <Top Valor="106"/>
+          <Top Valor="112"/>
           <Width Valor="61"/>
           <Height Valor="16"/>
           <Fonte default="-1"/>
@@ -308,8 +276,8 @@
           </Ligacoes>
         </Atributo>
         <Atributo nome="id_usuario" id="6">
-          <Left Valor="170"/>
-          <Top Valor="65"/>
+          <Left Valor="172"/>
+          <Top Valor="74"/>
           <Width Valor="86"/>
           <Height Valor="16"/>
           <Fonte default="-1"/>
@@ -341,7 +309,7 @@
         </Atributo>
         <Atributo nome="endereco" id="80">
           <Left Valor="179"/>
-          <Top Valor="201"/>
+          <Top Valor="185"/>
           <Width Valor="80"/>
           <Height Valor="16"/>
           <Fonte default="-1"/>
@@ -371,10 +339,10 @@
             </Ligacao>
           </Ligacoes>
         </Atributo>
-        <Atributo nome="score" id="86">
-          <Left Valor="199"/>
-          <Top Valor="220"/>
-          <Width Valor="58"/>
+        <Atributo nome="data_nasc" id="111">
+          <Left Valor="173"/>
+          <Top Valor="202"/>
+          <Width Valor="86"/>
           <Height Valor="16"/>
           <Fonte default="-1"/>
           <Atributos/>
@@ -388,15 +356,15 @@
           <MinCard Valor="1"/>
           <Composto Valor="0"/>
           <Identificador Valor="0"/>
-          <Tipo Valor="int"/>
+          <Tipo Valor="date"/>
           <Multivalorado Valor="0"/>
           <Orientacao Valor="2"/>
           <TamAuto Valor="-1"/>
           <Desvio Valor="10"/>
-          <BarraID Valor="87"/>
+          <BarraID Valor="112"/>
           <Ligacoes>
             <Ligacao Destino_ID="1">
-              <MostraCardinalidade Valor="0" Card_id="88"/>
+              <MostraCardinalidade Valor="0" Card_id="113"/>
               <Cardinalidades Cardinalidade="4"/>
               <Orientacao Valor="0"/>
               <Fraca Valor="0"/>
@@ -421,8 +389,8 @@
       <Fonte default="-1"/>
       <Atributos>
         <Atributo nome="id_recompensa" id="71">
-          <Left Valor="363"/>
-          <Top Valor="551"/>
+          <Left Valor="365"/>
+          <Top Valor="561"/>
           <Width Valor="114"/>
           <Height Valor="16"/>
           <Fonte default="-1"/>
@@ -453,8 +421,8 @@
           </Ligacoes>
         </Atributo>
         <Atributo nome="titulo" id="83">
-          <Left Valor="339"/>
-          <Top Valor="582"/>
+          <Left Valor="340"/>
+          <Top Valor="577"/>
           <Width Valor="57"/>
           <Height Valor="16"/>
           <Fonte default="-1"/>
@@ -485,8 +453,8 @@
           </Ligacoes>
         </Atributo>
         <Atributo nome="soma_score" id="89">
-          <Left Valor="219"/>
-          <Top Valor="557"/>
+          <Left Valor="315"/>
+          <Top Valor="593"/>
           <Width Valor="96"/>
           <Height Valor="16"/>
           <Fonte default="-1"/>
@@ -503,13 +471,45 @@
           <Identificador Valor="0"/>
           <Tipo Valor="int"/>
           <Multivalorado Valor="0"/>
-          <Orientacao Valor="2"/>
+          <Orientacao Valor="3"/>
           <TamAuto Valor="-1"/>
           <Desvio Valor="10"/>
           <BarraID Valor="90"/>
           <Ligacoes>
             <Ligacao Destino_ID="60">
               <MostraCardinalidade Valor="0" Card_id="91"/>
+              <Cardinalidades Cardinalidade="4"/>
+              <Orientacao Valor="0"/>
+              <Fraca Valor="0"/>
+            </Ligacao>
+          </Ligacoes>
+        </Atributo>
+        <Atributo nome="descricao" id="114">
+          <Left Valor="305"/>
+          <Top Valor="614"/>
+          <Width Valor="81"/>
+          <Height Valor="16"/>
+          <Fonte default="-1"/>
+          <Atributos/>
+          <AtributosOcultos/>
+          <Dicionario></Dicionario>
+          <Nula Valor="0"/>
+          <Observacao></Observacao>
+          <Futuro></Futuro>
+          <Anexos/>
+          <MaxCard Valor="1"/>
+          <MinCard Valor="1"/>
+          <Composto Valor="0"/>
+          <Identificador Valor="0"/>
+          <Tipo Valor="varchar(200)"/>
+          <Multivalorado Valor="0"/>
+          <Orientacao Valor="3"/>
+          <TamAuto Valor="-1"/>
+          <Desvio Valor="10"/>
+          <BarraID Valor="115"/>
+          <Ligacoes>
+            <Ligacao Destino_ID="60">
+              <MostraCardinalidade Valor="0" Card_id="116"/>
               <Cardinalidades Cardinalidade="4"/>
               <Orientacao Valor="0"/>
               <Fraca Valor="0"/>
@@ -646,10 +646,10 @@
             </Ligacao>
           </Ligacoes>
         </Atributo>
-        <Atributo nome="posicao" id="30">
+        <Atributo nome="score" id="30">
           <Left Valor="733"/>
           <Top Valor="170"/>
-          <Width Valor="70"/>
+          <Width Valor="58"/>
           <Height Valor="16"/>
           <Fonte default="-1"/>
           <Atributos/>
@@ -678,10 +678,10 @@
             </Ligacao>
           </Ligacoes>
         </Atributo>
-        <Atributo nome="data" id="33">
+        <Atributo nome="data_update" id="33">
           <Left Valor="733"/>
           <Top Valor="154"/>
-          <Width Valor="53"/>
+          <Width Valor="100"/>
           <Height Valor="16"/>
           <Fonte default="-1"/>
           <Atributos/>
@@ -728,8 +728,8 @@
       <Fonte default="-1"/>
       <Atributos>
         <Atributo nome="calorias" id="45">
-          <Left Valor="426"/>
-          <Top Valor="396"/>
+          <Left Valor="422"/>
+          <Top Valor="398"/>
           <Width Valor="71"/>
           <Height Valor="16"/>
           <Fonte default="-1"/>
@@ -759,10 +759,10 @@
             </Ligacao>
           </Ligacoes>
         </Atributo>
-        <Atributo nome="duracao" id="42">
-          <Left Valor="426"/>
+        <Atributo nome="data_inicio" id="42">
+          <Left Valor="421"/>
           <Top Valor="352"/>
-          <Width Valor="73"/>
+          <Width Valor="89"/>
           <Height Valor="16"/>
           <Fonte default="-1"/>
           <Atributos/>
@@ -776,7 +776,7 @@
           <MinCard Valor="1"/>
           <Composto Valor="0"/>
           <Identificador Valor="0"/>
-          <Tipo Valor="float"/>
+          <Tipo Valor="timestamp"/>
           <Multivalorado Valor="0"/>
           <Orientacao Valor="3"/>
           <TamAuto Valor="-1"/>
@@ -792,8 +792,8 @@
           </Ligacoes>
         </Atributo>
         <Atributo nome="distancia" id="48">
-          <Left Valor="425"/>
-          <Top Valor="367"/>
+          <Left Valor="422"/>
+          <Top Valor="368"/>
           <Width Valor="78"/>
           <Height Valor="16"/>
           <Fonte default="-1"/>
@@ -823,40 +823,8 @@
             </Ligacao>
           </Ligacoes>
         </Atributo>
-        <Atributo nome="data" id="51">
-          <Left Valor="426"/>
-          <Top Valor="382"/>
-          <Width Valor="53"/>
-          <Height Valor="16"/>
-          <Fonte default="-1"/>
-          <Atributos/>
-          <AtributosOcultos/>
-          <Dicionario></Dicionario>
-          <Nula Valor="0"/>
-          <Observacao></Observacao>
-          <Futuro></Futuro>
-          <Anexos/>
-          <MaxCard Valor="1"/>
-          <MinCard Valor="1"/>
-          <Composto Valor="0"/>
-          <Identificador Valor="0"/>
-          <Tipo Valor="timestamp"/>
-          <Multivalorado Valor="0"/>
-          <Orientacao Valor="3"/>
-          <TamAuto Valor="-1"/>
-          <Desvio Valor="10"/>
-          <BarraID Valor="52"/>
-          <Ligacoes>
-            <Ligacao Destino_ID="3">
-              <MostraCardinalidade Valor="0" Card_id="53"/>
-              <Cardinalidades Cardinalidade="4"/>
-              <Orientacao Valor="0"/>
-              <Fraca Valor="0"/>
-            </Ligacao>
-          </Ligacoes>
-        </Atributo>
         <Atributo nome="id_atividadelog" id="62">
-          <Left Valor="166"/>
+          <Left Valor="140"/>
           <Top Valor="374"/>
           <Width Valor="114"/>
           <Height Valor="16"/>
@@ -881,6 +849,38 @@
           <Ligacoes>
             <Ligacao Destino_ID="3">
               <MostraCardinalidade Valor="0" Card_id="64"/>
+              <Cardinalidades Cardinalidade="4"/>
+              <Orientacao Valor="0"/>
+              <Fraca Valor="0"/>
+            </Ligacao>
+          </Ligacoes>
+        </Atributo>
+        <Atributo nome="data_fim" id="117">
+          <Left Valor="422"/>
+          <Top Valor="383"/>
+          <Width Valor="78"/>
+          <Height Valor="16"/>
+          <Fonte default="-1"/>
+          <Atributos/>
+          <AtributosOcultos/>
+          <Dicionario></Dicionario>
+          <Nula Valor="0"/>
+          <Observacao></Observacao>
+          <Futuro></Futuro>
+          <Anexos/>
+          <MaxCard Valor="1"/>
+          <MinCard Valor="1"/>
+          <Composto Valor="0"/>
+          <Identificador Valor="0"/>
+          <Tipo Valor="timestamp"/>
+          <Multivalorado Valor="0"/>
+          <Orientacao Valor="3"/>
+          <TamAuto Valor="-1"/>
+          <Desvio Valor="10"/>
+          <BarraID Valor="118"/>
+          <Ligacoes>
+            <Ligacao Destino_ID="3">
+              <MostraCardinalidade Valor="0" Card_id="119"/>
               <Cardinalidades Cardinalidade="4"/>
               <Orientacao Valor="0"/>
               <Fraca Valor="0"/>
@@ -1072,8 +1072,8 @@
           <MostraCardinalidade Valor="-1" Card_id="69"/>
           <Cardinalidades Cardinalidade="4">
             <Cardinalidade nome="" id="69">
-              <Left Valor="305"/>
-              <Top Valor="332"/>
+              <Left Valor="340"/>
+              <Top Valor="334"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
               <Fonte default="-1"/>
@@ -1100,7 +1100,7 @@
           <MostraCardinalidade Valor="-1" Card_id="70"/>
           <Cardinalidades Cardinalidade="1">
             <Cardinalidade nome="" id="70">
-              <Left Valor="289"/>
+              <Left Valor="326"/>
               <Top Valor="235"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
@@ -1145,8 +1145,8 @@
           <MostraCardinalidade Valor="-1" Card_id="93"/>
           <Cardinalidades Cardinalidade="2">
             <Cardinalidade nome="" id="93">
-              <Left Valor="388"/>
-              <Top Valor="220"/>
+              <Left Valor="358"/>
+              <Top Valor="235"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
               <Fonte default="-1"/>
