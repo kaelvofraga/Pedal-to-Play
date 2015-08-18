@@ -739,8 +739,8 @@
       </Campos>
     </Tabela>
     <Tabela nome="Tipo_Imagem" id="7">
-      <Left Valor="748"/>
-      <Top Valor="513"/>
+      <Left Valor="761"/>
+      <Top Valor="512"/>
       <Width Valor="134"/>
       <Height Valor="66"/>
       <Fonte default="-1"/>
@@ -754,8 +754,8 @@
       <cOrdem Valor="0"/>
       <Campos>
         <Campo nome="id_tipoimagem" id="32">
-          <Left Valor="748"/>
-          <Top Valor="532"/>
+          <Left Valor="761"/>
+          <Top Valor="531"/>
           <Width Valor="132"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
@@ -775,8 +775,8 @@
           <OnDelete Valor="0"/>
         </Campo>
         <Campo nome="descricao" id="33">
-          <Left Valor="748"/>
-          <Top Valor="550"/>
+          <Left Valor="761"/>
+          <Top Valor="549"/>
           <Width Valor="132"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
@@ -1127,8 +1127,8 @@
       </Ligacoes>
     </LigaTabela>
     <LigaTabela nome="Tipo_Imagem_Imagem_1" id="51">
-      <Left Valor="657"/>
-      <Top Valor="589"/>
+      <Left Valor="744"/>
+      <Top Valor="594"/>
       <Width Valor="15"/>
       <Height Valor="15"/>
       <Fonte default="-1"/>
@@ -1143,8 +1143,8 @@
           <MostraCardinalidade Valor="-1" Card_id="52"/>
           <Cardinalidades Cardinalidade="1">
             <Cardinalidade nome="" id="52">
-              <Left Valor="815"/>
-              <Top Valor="580"/>
+              <Left Valor="828"/>
+              <Top Valor="579"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
               <Fonte default="-1"/>
@@ -1169,8 +1169,8 @@
           <MostraCardinalidade Valor="-1" Card_id="53"/>
           <Cardinalidades Cardinalidade="4">
             <Cardinalidade nome="" id="53">
-              <Left Valor="633"/>
-              <Top Valor="595"/>
+              <Left Valor="700"/>
+              <Top Valor="538"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
               <Fonte default="-1"/>
@@ -1194,8 +1194,8 @@
       </Ligacoes>
     </LigaTabela>
     <LigaTabela nome="Imagem_composto por_1" id="55">
-      <Left Valor="658"/>
-      <Top Valor="446"/>
+      <Left Valor="657"/>
+      <Top Valor="459"/>
       <Width Valor="15"/>
       <Height Valor="15"/>
       <Fonte default="-1"/>
@@ -1262,7 +1262,7 @@
     </LigaTabela>
     <LigaTabela nome="Avatar_composto por_1" id="58">
       <Left Valor="657"/>
-      <Top Valor="317"/>
+      <Top Valor="305"/>
       <Width Valor="15"/>
       <Height Valor="15"/>
       <Fonte default="-1"/>
