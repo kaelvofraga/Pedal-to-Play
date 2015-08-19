@@ -2,7 +2,7 @@
 <MER>
 	<Informacoes>
 		<Posicao Left="0" Top="0"/>
-		<TotalItens Valor="75"/>
+		<TotalItens Valor="70"/>
 		<Tipo Valor="LÓGICO"/>
 		<Versao Valor="2.0.0"/>
 		<Autor Valor=""/>
@@ -31,7 +31,7 @@
       <Left Valor="566"/>
       <Top Valor="512"/>
       <Width Valor="134"/>
-      <Height Valor="82"/>
+      <Height Valor="70"/>
       <Fonte default="-1"/>
       <Dicionario></Dicionario>
       <Nula Valor="0"/>
@@ -63,30 +63,9 @@
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
         </Campo>
-        <Campo nome="nome_extensao" id="9">
-          <Left Valor="566"/>
-          <Top Valor="549"/>
-          <Width Valor="132"/>
-          <Height Valor="19"/>
-          <Fonte default="-1"/>
-          <Dicionario></Dicionario>
-          <Nula Valor="-1"/>
-          <Observacao></Observacao>
-          <Futuro></Futuro>
-          <Anexos/>
-          <ApenasSeparador Valor="0"/>
-          <IsKey Valor="0"/>
-          <IsFKey Valor="0"/>
-          <Tipo Valor="vachar(30)"/>
-          <TabOrigem Valor="0"/>
-          <CampoOrigem Valor="0"/>
-          <Complemento Valor=""/>
-          <OnUpdate Valor="0"/>
-          <OnDelete Valor="0"/>
-        </Campo>
         <Campo nome="id_tipoimagem" id="50">
           <Left Valor="566"/>
-          <Top Valor="567"/>
+          <Top Valor="549"/>
           <Width Valor="132"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
@@ -108,10 +87,10 @@
       </Campos>
     </Tabela>
     <Tabela nome="Usuario" id="2">
-      <Left Valor="253"/>
-      <Top Valor="46"/>
-      <Width Valor="134"/>
-      <Height Valor="190"/>
+      <Left Valor="198"/>
+      <Top Valor="45"/>
+      <Width Valor="189"/>
+      <Height Valor="191"/>
       <Fonte default="-1"/>
       <Dicionario></Dicionario>
       <Nula Valor="0"/>
@@ -123,9 +102,9 @@
       <cOrdem Valor="0"/>
       <Campos>
         <Campo nome="data_inscricao" id="10">
-          <Left Valor="253"/>
-          <Top Valor="65"/>
-          <Width Valor="132"/>
+          <Left Valor="198"/>
+          <Top Valor="64"/>
+          <Width Valor="187"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -144,9 +123,9 @@
           <OnDelete Valor="0"/>
         </Campo>
         <Campo nome="email" id="11">
-          <Left Valor="253"/>
-          <Top Valor="83"/>
-          <Width Valor="132"/>
+          <Left Valor="198"/>
+          <Top Valor="82"/>
+          <Width Valor="187"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -165,9 +144,9 @@
           <OnDelete Valor="0"/>
         </Campo>
         <Campo nome="nome" id="12">
-          <Left Valor="253"/>
-          <Top Valor="101"/>
-          <Width Valor="132"/>
+          <Left Valor="198"/>
+          <Top Valor="100"/>
+          <Width Valor="187"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -186,9 +165,9 @@
           <OnDelete Valor="0"/>
         </Campo>
         <Campo nome="peso" id="13">
-          <Left Valor="253"/>
-          <Top Valor="119"/>
-          <Width Valor="132"/>
+          <Left Valor="198"/>
+          <Top Valor="118"/>
+          <Width Valor="187"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -207,9 +186,9 @@
           <OnDelete Valor="0"/>
         </Campo>
         <Campo nome="senha" id="14">
-          <Left Valor="253"/>
-          <Top Valor="137"/>
-          <Width Valor="132"/>
+          <Left Valor="198"/>
+          <Top Valor="136"/>
+          <Width Valor="187"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -228,9 +207,9 @@
           <OnDelete Valor="0"/>
         </Campo>
         <Campo nome="id_usuario" id="15">
-          <Left Valor="253"/>
-          <Top Valor="155"/>
-          <Width Valor="132"/>
+          <Left Valor="198"/>
+          <Top Valor="154"/>
+          <Width Valor="187"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -249,9 +228,9 @@
           <OnDelete Valor="0"/>
         </Campo>
         <Campo nome="endereco" id="16">
-          <Left Valor="253"/>
-          <Top Valor="173"/>
-          <Width Valor="132"/>
+          <Left Valor="198"/>
+          <Top Valor="172"/>
+          <Width Valor="187"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -270,9 +249,9 @@
           <OnDelete Valor="0"/>
         </Campo>
         <Campo nome="data_nasc" id="17">
-          <Left Valor="253"/>
-          <Top Valor="191"/>
-          <Width Valor="132"/>
+          <Left Valor="198"/>
+          <Top Valor="190"/>
+          <Width Valor="187"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -291,9 +270,9 @@
           <OnDelete Valor="0"/>
         </Campo>
         <Campo nome="id_avatar" id="42">
-          <Left Valor="253"/>
-          <Top Valor="209"/>
-          <Width Valor="132"/>
+          <Left Valor="198"/>
+          <Top Valor="208"/>
+          <Width Valor="187"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -314,10 +293,10 @@
       </Campos>
     </Tabela>
     <Tabela nome="Recompensa" id="3">
-      <Left Valor="251"/>
+      <Left Valor="235"/>
       <Top Valor="494"/>
-      <Width Valor="134"/>
-      <Height Valor="118"/>
+      <Width Valor="150"/>
+      <Height Valor="71"/>
       <Fonte default="-1"/>
       <Dicionario></Dicionario>
       <Nula Valor="0"/>
@@ -329,9 +308,9 @@
       <cOrdem Valor="0"/>
       <Campos>
         <Campo nome="id_recompensa" id="18">
-          <Left Valor="251"/>
+          <Left Valor="235"/>
           <Top Valor="513"/>
-          <Width Valor="132"/>
+          <Width Valor="148"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -349,73 +328,10 @@
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
         </Campo>
-        <Campo nome="titulo" id="19">
-          <Left Valor="251"/>
-          <Top Valor="531"/>
-          <Width Valor="132"/>
-          <Height Valor="19"/>
-          <Fonte default="-1"/>
-          <Dicionario></Dicionario>
-          <Nula Valor="-1"/>
-          <Observacao></Observacao>
-          <Futuro></Futuro>
-          <Anexos/>
-          <ApenasSeparador Valor="0"/>
-          <IsKey Valor="0"/>
-          <IsFKey Valor="0"/>
-          <Tipo Valor="varchar(30)"/>
-          <TabOrigem Valor="0"/>
-          <CampoOrigem Valor="0"/>
-          <Complemento Valor=""/>
-          <OnUpdate Valor="0"/>
-          <OnDelete Valor="0"/>
-        </Campo>
-        <Campo nome="soma_score" id="20">
-          <Left Valor="251"/>
-          <Top Valor="549"/>
-          <Width Valor="132"/>
-          <Height Valor="19"/>
-          <Fonte default="-1"/>
-          <Dicionario></Dicionario>
-          <Nula Valor="-1"/>
-          <Observacao></Observacao>
-          <Futuro></Futuro>
-          <Anexos/>
-          <ApenasSeparador Valor="0"/>
-          <IsKey Valor="0"/>
-          <IsFKey Valor="0"/>
-          <Tipo Valor="int"/>
-          <TabOrigem Valor="0"/>
-          <CampoOrigem Valor="0"/>
-          <Complemento Valor=""/>
-          <OnUpdate Valor="0"/>
-          <OnDelete Valor="0"/>
-        </Campo>
-        <Campo nome="descricao" id="21">
-          <Left Valor="251"/>
-          <Top Valor="567"/>
-          <Width Valor="132"/>
-          <Height Valor="19"/>
-          <Fonte default="-1"/>
-          <Dicionario></Dicionario>
-          <Nula Valor="-1"/>
-          <Observacao></Observacao>
-          <Futuro></Futuro>
-          <Anexos/>
-          <ApenasSeparador Valor="0"/>
-          <IsKey Valor="0"/>
-          <IsFKey Valor="0"/>
-          <Tipo Valor="varchar(200)"/>
-          <TabOrigem Valor="0"/>
-          <CampoOrigem Valor="0"/>
-          <Complemento Valor=""/>
-          <OnUpdate Valor="0"/>
-          <OnDelete Valor="0"/>
-        </Campo>
         <Campo nome="id_imagem" id="46">
-          <Left Valor="251"/>
-          <Top Valor="585"/>
-          <Width Valor="132"/>
+          <Left Valor="235"/>
+          <Top Valor="531"/>
+          <Width Valor="148"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -495,10 +411,10 @@
       </Campos>
     </Tabela>
     <Tabela nome="Ranking" id="5">
-      <Left Valor="573"/>
-      <Top Valor="57"/>
-      <Width Valor="134"/>
-      <Height Valor="100"/>
+      <Left Valor="576"/>
+      <Top Valor="58"/>
+      <Width Valor="171"/>
+      <Height Valor="104"/>
       <Fonte default="-1"/>
       <Dicionario></Dicionario>
       <Nula Valor="0"/>
@@ -510,9 +426,9 @@
       <cOrdem Valor="0"/>
       <Campos>
         <Campo nome="id_ranking" id="24">
-          <Left Valor="573"/>
-          <Top Valor="76"/>
-          <Width Valor="132"/>
+          <Left Valor="576"/>
+          <Top Valor="77"/>
+          <Width Valor="169"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -531,9 +447,9 @@
           <OnDelete Valor="0"/>
         </Campo>
         <Campo nome="score" id="25">
-          <Left Valor="573"/>
-          <Top Valor="94"/>
-          <Width Valor="132"/>
+          <Left Valor="576"/>
+          <Top Valor="95"/>
+          <Width Valor="169"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -552,9 +468,9 @@
           <OnDelete Valor="0"/>
         </Campo>
         <Campo nome="data_update" id="26">
-          <Left Valor="573"/>
-          <Top Valor="112"/>
-          <Width Valor="132"/>
+          <Left Valor="576"/>
+          <Top Valor="113"/>
+          <Width Valor="169"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -573,9 +489,9 @@
           <OnDelete Valor="0"/>
         </Campo>
         <Campo nome="id_usuario" id="34">
-          <Left Valor="573"/>
-          <Top Valor="130"/>
-          <Width Valor="132"/>
+          <Left Valor="576"/>
+          <Top Valor="131"/>
+          <Width Valor="169"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -596,9 +512,9 @@
       </Campos>
     </Tabela>
     <Tabela nome="AtividadeLog" id="6">
-      <Left Valor="251"/>
+      <Left Valor="224"/>
       <Top Valor="329"/>
-      <Width Valor="134"/>
+      <Width Valor="161"/>
       <Height Valor="136"/>
       <Fonte default="-1"/>
       <Dicionario></Dicionario>
@@ -611,9 +527,9 @@
       <cOrdem Valor="0"/>
       <Campos>
         <Campo nome="calorias" id="27">
-          <Left Valor="251"/>
+          <Left Valor="224"/>
           <Top Valor="348"/>
-          <Width Valor="132"/>
+          <Width Valor="159"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -632,9 +548,9 @@
           <OnDelete Valor="0"/>
         </Campo>
         <Campo nome="data_inicio" id="28">
-          <Left Valor="251"/>
+          <Left Valor="224"/>
           <Top Valor="366"/>
-          <Width Valor="132"/>
+          <Width Valor="159"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -653,9 +569,9 @@
           <OnDelete Valor="0"/>
         </Campo>
         <Campo nome="distancia" id="29">
-          <Left Valor="251"/>
+          <Left Valor="224"/>
           <Top Valor="384"/>
-          <Width Valor="132"/>
+          <Width Valor="159"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -674,9 +590,9 @@
           <OnDelete Valor="0"/>
         </Campo>
         <Campo nome="id_atividadelog" id="30">
-          <Left Valor="251"/>
+          <Left Valor="224"/>
           <Top Valor="402"/>
-          <Width Valor="132"/>
+          <Width Valor="159"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -695,9 +611,9 @@
           <OnDelete Valor="0"/>
         </Campo>
         <Campo nome="data_fim" id="31">
-          <Left Valor="251"/>
+          <Left Valor="224"/>
           <Top Valor="420"/>
-          <Width Valor="132"/>
+          <Width Valor="159"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -716,9 +632,9 @@
           <OnDelete Valor="0"/>
         </Campo>
         <Campo nome="id_usuario" id="38">
-          <Left Valor="251"/>
+          <Left Valor="224"/>
           <Top Valor="438"/>
-          <Width Valor="132"/>
+          <Width Valor="159"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -739,10 +655,10 @@
       </Campos>
     </Tabela>
     <Tabela nome="Tipo_Imagem" id="7">
-      <Left Valor="761"/>
-      <Top Valor="512"/>
-      <Width Valor="134"/>
-      <Height Valor="66"/>
+      <Left Valor="775"/>
+      <Top Valor="514"/>
+      <Width Valor="146"/>
+      <Height Valor="51"/>
       <Fonte default="-1"/>
       <Dicionario></Dicionario>
       <Nula Valor="0"/>
@@ -754,9 +670,9 @@
       <cOrdem Valor="0"/>
       <Campos>
         <Campo nome="id_tipoimagem" id="32">
-          <Left Valor="761"/>
-          <Top Valor="531"/>
-          <Width Valor="132"/>
+          <Left Valor="775"/>
+          <Top Valor="533"/>
+          <Width Valor="144"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -768,27 +684,6 @@
           <IsKey Valor="-1"/>
           <IsFKey Valor="0"/>
           <Tipo Valor="long"/>
-          <TabOrigem Valor="0"/>
-          <CampoOrigem Valor="0"/>
-          <Complemento Valor=""/>
-          <OnUpdate Valor="0"/>
-          <OnDelete Valor="0"/>
-        </Campo>
-        <Campo nome="descricao" id="33">
-          <Left Valor="761"/>
-          <Top Valor="549"/>
-          <Width Valor="132"/>
-          <Height Valor="19"/>
-          <Fonte default="-1"/>
-          <Dicionario></Dicionario>
-          <Nula Valor="-1"/>
-          <Observacao></Observacao>
-          <Futuro></Futuro>
-          <Anexos/>
-          <ApenasSeparador Valor="0"/>
-          <IsKey Valor="0"/>
-          <IsFKey Valor="0"/>
-          <Tipo Valor="varchar(30)"/>
           <TabOrigem Valor="0"/>
           <CampoOrigem Valor="0"/>
           <Complemento Valor=""/>
@@ -876,7 +771,7 @@
           <Cardinalidades Cardinalidade="1">
             <Cardinalidade nome="" id="36">
               <Left Valor="387"/>
-              <Top Valor="94"/>
+              <Top Valor="93"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
               <Fonte default="-1"/>
@@ -901,8 +796,8 @@
           <MostraCardinalidade Valor="-1" Card_id="37"/>
           <Cardinalidades Cardinalidade="2">
             <Cardinalidade nome="" id="37">
-              <Left Valor="535"/>
-              <Top Valor="92"/>
+              <Left Valor="538"/>
+              <Top Valor="95"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
               <Fonte default="-1"/>
@@ -942,7 +837,7 @@
           <MostraCardinalidade Valor="-1" Card_id="40"/>
           <Cardinalidades Cardinalidade="1">
             <Cardinalidade nome="" id="40">
-              <Left Valor="320"/>
+              <Left Valor="292"/>
               <Top Valor="237"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
@@ -968,7 +863,7 @@
           <MostraCardinalidade Valor="-1" Card_id="41"/>
           <Cardinalidades Cardinalidade="4">
             <Cardinalidade nome="" id="41">
-              <Left Valor="318"/>
+              <Left Valor="304"/>
               <Top Valor="314"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
@@ -1036,7 +931,7 @@
           <Cardinalidades Cardinalidade="2">
             <Cardinalidade nome="" id="45">
               <Left Valor="387"/>
-              <Top Valor="157"/>
+              <Top Valor="156"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
               <Fonte default="-1"/>
@@ -1077,7 +972,7 @@
           <Cardinalidades Cardinalidade="1">
             <Cardinalidade nome="" id="48">
               <Left Valor="528"/>
-              <Top Valor="538"/>
+              <Top Valor="532"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
               <Fonte default="-1"/>
@@ -1103,7 +998,7 @@
           <Cardinalidades Cardinalidade="2">
             <Cardinalidade nome="" id="49">
               <Left Valor="385"/>
-              <Top Valor="538"/>
+              <Top Valor="514"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
               <Fonte default="-1"/>
@@ -1127,8 +1022,8 @@
       </Ligacoes>
     </LigaTabela>
     <LigaTabela nome="Tipo_Imagem_Imagem_1" id="51">
-      <Left Valor="744"/>
-      <Top Valor="594"/>
+      <Left Valor="725"/>
+      <Top Valor="565"/>
       <Width Valor="15"/>
       <Height Valor="15"/>
       <Fonte default="-1"/>
@@ -1143,8 +1038,8 @@
           <MostraCardinalidade Valor="-1" Card_id="52"/>
           <Cardinalidades Cardinalidade="1">
             <Cardinalidade nome="" id="52">
-              <Left Valor="828"/>
-              <Top Valor="579"/>
+              <Left Valor="737"/>
+              <Top Valor="524"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
               <Fonte default="-1"/>
@@ -1170,7 +1065,7 @@
           <Cardinalidades Cardinalidade="4">
             <Cardinalidade nome="" id="53">
               <Left Valor="700"/>
-              <Top Valor="538"/>
+              <Top Valor="532"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
               <Fonte default="-1"/>
