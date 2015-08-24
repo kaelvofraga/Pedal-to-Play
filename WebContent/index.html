@@ -3,22 +3,21 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="resources/style/bootstrap/css/bootstrap.min.css" />
   <link rel="stylesheet" type="text/css" href="resources/style/app.css" />
-  <script type="text/javascript" src="resources/angularjs/angular.min.js"></script>
-  <script type="text/javascript" src="app.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 
-<body ng-controller="MainController as mainCtrl">
-  <header>
-    <!-- HEADER -->
-  </header>
+<body>
+  <!-- PAGE CONTENT -->
+  <div ng-controller="MainController" ui-view></div>
 
-  <div>
-    <!-- PAGE CONTENT -->
-    {{"Hello " + "World!"}}
-  </div>
-
+  <script type="text/javascript" src="resources/angularjs/angular.min.js"></script>
+  <script type="text/javascript" src="resources/angularjs/angular-ui-router.min.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+  <script type="text/javascript" src="services/AuthenticationService.js"></script>
+  <script type="text/javascript" src="controllers/AuthenticationCtrl.js"></script> 
 </body>
 
 </html>

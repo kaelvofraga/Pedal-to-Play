@@ -1,3 +1,9 @@
+html{
+  margin: 0 auto;
+  border: 0;
+  height: 100%;  
+}
+
 .ng-invalid.ng-dirty {
   border-color:red;
 } 
@@ -5,3 +11,19 @@
 .ng-valid.ng-dirty {
   border-color:green;
 } 
+
+#authDiv{
+  max-width: 600px;
+}
+
+.mini-logo{
+  max-width: 86px;
+  max-height: 86px;
+  margin-top: 16px;
+}
+
+.nav-purple{
+  background-color: #673ab7;
+  border: 0;
+  border-radius: 0;
+}

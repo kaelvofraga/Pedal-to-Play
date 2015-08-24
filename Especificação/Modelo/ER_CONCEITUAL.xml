@@ -2,7 +2,7 @@
 <MER>
 	<Informacoes>
 		<Posicao Left="0" Top="67"/>
-		<TotalItens Valor="140"/>
+		<TotalItens Valor="144"/>
 		<Tipo Valor="CONCEITUAL"/>
 		<Versao Valor="2.0.0"/>
 		<Autor Valor=""/>
@@ -36,7 +36,7 @@
       <Atributos>
         <Atributo nome="id_imagem" id="36">
           <Left Valor="735"/>
-          <Top Valor="486"/>
+          <Top Valor="480"/>
           <Width Valor="90"/>
           <Height Valor="16"/>
           <Fonte default="-1"/>
@@ -68,7 +68,7 @@
         </Atributo>
         <Atributo nome="nome_extensao" id="65">
           <Left Valor="735"/>
-          <Top Valor="508"/>
+          <Top Valor="512"/>
           <Width Valor="119"/>
           <Height Valor="16"/>
           <Fonte default="-1"/>
@@ -92,6 +92,38 @@
           <Ligacoes>
             <Ligacao Destino_ID="5">
               <MostraCardinalidade Valor="0" Card_id="67"/>
+              <Cardinalidades Cardinalidade="4"/>
+              <Orientacao Valor="0"/>
+              <Fraca Valor="0"/>
+            </Ligacao>
+          </Ligacoes>
+        </Atributo>
+        <Atributo nome="cor" id="185">
+          <Left Valor="735"/>
+          <Top Valor="496"/>
+          <Width Valor="45"/>
+          <Height Valor="16"/>
+          <Fonte default="-1"/>
+          <Atributos/>
+          <AtributosOcultos/>
+          <Dicionario></Dicionario>
+          <Nula Valor="0"/>
+          <Observacao></Observacao>
+          <Futuro></Futuro>
+          <Anexos/>
+          <MaxCard Valor="1"/>
+          <MinCard Valor="0"/>
+          <Composto Valor="0"/>
+          <Identificador Valor="0"/>
+          <Tipo Valor="long"/>
+          <Multivalorado Valor="0"/>
+          <Orientacao Valor="3"/>
+          <TamAuto Valor="-1"/>
+          <Desvio Valor="10"/>
+          <BarraID Valor="186"/>
+          <Ligacoes>
+            <Ligacao Destino_ID="5">
+              <MostraCardinalidade Valor="0" Card_id="187"/>
               <Cardinalidades Cardinalidade="4"/>
               <Orientacao Valor="0"/>
               <Fraca Valor="0"/>

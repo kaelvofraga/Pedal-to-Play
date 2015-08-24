@@ -48,9 +48,13 @@
         <hr class="rnghr"/>
         <div class="rng">
             <p>1.01 = Email deverá estar no formato padrão de email. Caso contrário exibi-se a MSG 1.01</p>
-            <p>1.02 = Senha deve conter mais de 6 caracteres. Caso contrário exibi-se a MSG 1.02</p>
+            <p>1.02 = Senha deve conter de 6 a 30 caracteres. Caso contrário exibi-se a MSG 1.02</p>
             <p>1.03 = Para o formulário de cadastro ser válido também é necessário que a senha e a senha
-                      de confirmação sejam idênticas. Caso contrário exibi-se a MSG 1.03</p>               
+                      de confirmação sejam idênticas. Caso contrário exibi-se a MSG 1.03</p>
+			<p>1.04 = Os campos de email, senha e confirmação de senha são obrigatórios, caso
+					  não algum não seja preenchido deve-se exibir a mensagem MSG 1.04</p>
+			<p>1.05 = Não deve-se habilitar o registro de um email já registrado. 
+					  Caso contrário exibi-se a MSG 1.05</p>					  
             <br>
             </div>
         
@@ -59,8 +63,10 @@
         <p class="obs">-->Opções para tipo de mensagem, utilizados ao final entre colchetes [Notificação, Alerta, Erro ou Confirmação]</p>
         <div class="msg">
             <p>1.01 = [Erro] Email inválido. </p>
-            <p>1.02 = [Erro] Senha inválida. Deve conter mais de 6 caracteres.</p>
+            <p>1.02 = [Erro] Senha inválida. Deve conter de 6 a 30 caracteres.</p>
             <p>1.03 = [Erro] As senhas digitadas são diferentes.</p>
+			<p>1.04 = [Erro] Este campo deve ser preenchido.</p>
+			<p>1.05 = [Erro] Este email já está sendo utilizado.</p>
             <br>
         </div>
     </body>
