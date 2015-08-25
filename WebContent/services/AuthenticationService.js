@@ -5,20 +5,23 @@
 app.factory('AuthService', ['$http', function ($http) {
 	return {
 		signIn: function (scope) {
-			console.log("Sing In");
-			/*$http.post('localhost/Pedal-to-Play/Server/AuthenticationService.php', scope.user)
+			$http.post('localhost/Pedal-to-Play/Server/AuthenticationService.php', scope.user)
 				.then(
 					// Sucess
 					function (response) {
 						console.log("Request sucess: " + response.data);
-						//scope.user = response.data;
-						scope.feedback = "Login realizado com sucesso.";
+						if (response.data !== false) {
+							scope.user = response.data;
+							scope.feedback = "Login realizado com sucesso.";
+						} else {
+							scope.feedback = "Login inválido.";	
+						}						
 					},
 					// Fail 
 					function (error) {
 						console.log(error);
-						scope.feedback = "Falha ao tentar realizar o login.";
-					});*/
+						scope.feedback = "[Login] Falha ao tentar conectar com o serviço.";
+					});
 		},		
 		signUp: function (scope) {
 			console.log("Sing Up");
