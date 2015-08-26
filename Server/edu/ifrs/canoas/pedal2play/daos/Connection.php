@@ -33,7 +33,7 @@ class Connection {
      */
     public function connect() {    
         if(!isset(self::$connection)) {
-            $config = parse_ini_file('./resources/dbconfig.ini');
+            $config = parse_ini_file(__DIR__.'/../resources/dbconfig.ini');
             self::$connection = new mysqli('localhost', $config['username'], $config['password'], $config['dbname']);
         }
 

@@ -1,7 +1,7 @@
 <?php 
 require_once ('Connection.php'); 
-class UserDAO{
-	
+class UserDAO
+{	
 	private $conn;
 	
 	public function __construct() {
@@ -12,10 +12,10 @@ class UserDAO{
 		if ($this->conn) {
 			$email = $this->conn->quote($user->email);
 			$password = $this->conn->quote($user->password);
-		
+			
 			return $this->conn->select("SELECT u.* FROM Usuario u WHERE 
-										u.email = '" . $email . "' AND 
-										u.senha = '" . md5($password) . "'");			
+										u.email = " . $email . " AND 
+										u.senha = '" . md5($password) . "'");							
 		}
 		return false;
 	}

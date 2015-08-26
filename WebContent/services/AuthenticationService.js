@@ -5,7 +5,7 @@
 app.factory('AuthService', ['$http', function ($http) {
 	return {
 		signIn: function (scope) {
-			$http.post('localhost/Pedal-to-Play/Server/AuthenticationService.php', scope.user)
+			$http.post('http://localhost/Pedal-to-Play/Server/signIn', scope.user)
 				.then(
 					// Sucess
 					function (response) {
@@ -20,7 +20,7 @@ app.factory('AuthService', ['$http', function ($http) {
 					// Fail 
 					function (error) {
 						console.log(error);
-						scope.feedback = "[Login] Falha ao tentar conectar com o serviço.";
+						scope.feedback = "Falha ao tentar conectar com o serviço.";
 					});
 		},		
 		signUp: function (scope) {
