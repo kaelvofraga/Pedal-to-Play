@@ -2,10 +2,11 @@
 
 'use strict';
 
-app.controller('AuthController', ['AuthService', '$scope', function (AuthService, $scope) {
+app.controller('AuthController', ['AuthService', '$scope', 'md5', function (AuthService, $scope, md5) {
   $scope.isRegistering = false;
   $scope.user = {};
   $scope.confirmPassword;
+  $scope.temporaryPassword;
   $scope.feedback = '';
 
   this.changeOperation = function () {
@@ -14,9 +15,11 @@ app.controller('AuthController', ['AuthService', '$scope', function (AuthService
     $scope.authForm.$setUntouched();
     $scope.user.password = "";
     $scope.confirmPassword = "";
+    $scope.temporaryPassword = "";
   }
 
   this.signUser = function () {
+    $scope.user.password = md5.createHash($scope.temporaryPassword);
     if ($scope.isRegistering) {
       AuthService.signUp($scope); //call register service
     } else {

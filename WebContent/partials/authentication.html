@@ -24,7 +24,7 @@
 		</div>
 		<div class="form-group">
 			<label for="password">Senha:</label>
-			<input type="password" class="form-control" placeholder="6 a 30 caracteres" ng-model="user.password" 
+			<input type="password" class="form-control" placeholder="6 a 30 caracteres" ng-model="temporaryPassword" 
 				name="uPassword" minlength="6" maxlength="30" required>
 			<div class="help-block" ng-show="authForm.$submitted || authForm.uPassword.$touched">
 				<span ng-show="authForm.uPassword.$error.required">
@@ -53,4 +53,3 @@
 		</button>
 	</form>
 </div>
-<img class="mini-logo img-responsive center-block" src="resources/images/logo.svg" alt="Logo" title="Logo">

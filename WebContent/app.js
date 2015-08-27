@@ -2,7 +2,7 @@
 
 'use strict';
 
-var app = angular.module('Pedal2Play', ['ui.router']);
+var app = angular.module('Pedal2Play', ['ui.router', 'ngMd5']);
 
 app.controller('MainController', ['$scope', function ($scope) {
   $scope.appName = 'Pedal-to-Play';

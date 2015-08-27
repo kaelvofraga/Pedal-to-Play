@@ -17,9 +17,9 @@ html{
 }
 
 .mini-logo{
-  max-width: 86px;
-  max-height: 86px;
-  margin-top: 16px;
+  max-width: 32px;
+  max-height: 32px;
+  /*margin-top: 16px;*/
 }
 
 .nav-purple{

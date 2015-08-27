@@ -1,28 +1,31 @@
 <?php
+
 /*
-The MIT License (MIT)
+  The MIT License (MIT)
 
-Copyright (c) 2014 
+  Copyright (c) 2014
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-*/
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+ */
+
 class Connection {
+
     // The database connection
     protected static $connection;
 
@@ -31,16 +34,16 @@ class Connection {
      * 
      * @return bool false on failure / mysqli MySQLi object instance on success
      */
-    public function connect() {    
-        if(!isset(self::$connection)) {
-            $config = parse_ini_file(__DIR__.'/../resources/dbconfig.ini');
+    public function connect() {
+        if (!isset(self::$connection)) {
+            $config = parse_ini_file(__DIR__ . '/../resources/dbconfig.ini');
             self::$connection = new mysqli('localhost', $config['username'], $config['password'], $config['dbname']);
         }
 
-        if(self::$connection === false) {
+        if (self::$connection === false) {
             return false;
         }
-                
+
         return self::$connection;
     }
 
@@ -51,9 +54,9 @@ class Connection {
      * @return mixed The result of the mysqli::query() function
      */
     public function query($query) {
-        $connection = $this -> connect();
+        $connection = $this->connect();
 
-        $result = $connection -> query($query);
+        $result = $connection->query($query);
 
         return $result;
     }
@@ -66,11 +69,11 @@ class Connection {
      */
     public function select($query) {
         $rows = array();
-        $result = $this -> query($query);
-        if($result === false) {
+        $result = $this->query($query);
+        if ($result === false) {
             return false;
         }
-        while ($row = $result -> fetch_assoc()) {
+        while ($row = $result->fetch_assoc()) {
             $rows[] = $row;
         }
         return $rows;
@@ -82,8 +85,8 @@ class Connection {
      * @return string Database error message
      */
     public function error() {
-        $connection = $this -> connect();
-        return $connection -> error;
+        $connection = $this->connect();
+        return $connection->error;
     }
 
     /**
@@ -93,8 +96,8 @@ class Connection {
      * @return string The quoted and escaped string
      */
     public function quote($value) {
-        $connection = $this -> connect();
-        return "'" . $connection -> real_escape_string($value) . "'";
+        $connection = $this->connect();
+        return "'" . $connection->real_escape_string($value) . "'";
     }
+
 }
-?>
