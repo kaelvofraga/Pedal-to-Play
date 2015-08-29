@@ -14,10 +14,10 @@ class UserDAO {
         if ($this->conn) {
             $email = $this->conn->quote($user->email);
             $password = $this->conn->quote($user->password);
-
+            
             return $this->conn->select("SELECT u.* FROM User u WHERE 
 					u.email = " . $email . " AND 
-					u.password = " . $password)[0];
+					u.password = " . $password);
         }
         return false;
     }

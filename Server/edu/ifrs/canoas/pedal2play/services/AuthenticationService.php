@@ -13,8 +13,12 @@ class AuthenticationService {
     public function signIn($user) {
         if ($user !== null &&
             $user->email !== null &&
-            $user->password !== null) {
-            return $this->userDAO->searchUser($user);
+            $user->password !== null) 
+        {              
+            $results = $this->userDAO->searchUser($user);    
+            if (count($results) > 0) {
+                return $results[0]; // returns first element in array
+            }
         }
         return false;
     }
