@@ -2,14 +2,17 @@
 
 require_once '/edu/ifrs/canoas/pedal2play/resources/Slim/Slim/Slim.php';
 require_once '/edu/ifrs/canoas/pedal2play/services/AuthenticationService.php';
+require_once '/edu/ifrs/canoas/pedal2play/services/TokenAuth.php';
 
 \Slim\Slim::registerAutoloader();
 $app = new \Slim\Slim();
 
 $app->response()->header('Content-Type', 'application/json;charset=utf-8');
 
+$app->add(new \TokenAuth());
+
 $app->get('/', function () {
-    echo "PSP-WebAPI";
+    echo "P2P-WebAPI";
 });
 
 $app->post('/signIn', 'signIn');

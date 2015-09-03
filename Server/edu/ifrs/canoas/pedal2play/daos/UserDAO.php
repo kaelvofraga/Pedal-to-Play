@@ -1,6 +1,6 @@
 <?php
 
-require_once ('Connection.php');
+require_once 'Connection.php';
 
 class UserDAO {
 
@@ -15,9 +15,21 @@ class UserDAO {
             $email = $this->conn->quote($user->email);
             $password = $this->conn->quote($user->password);
             
-            return $this->conn->select("SELECT u.* FROM User u WHERE 
+            return $this->conn->select("SELECT u.id_user, u.token FROM User u WHERE 
 					u.email = " . $email . " AND 
 					u.password = " . $password);
+        }
+        return false;
+    }
+    
+    public function validateToken($id, $token) {
+        if ($this->conn) {
+            $quotedID = $this->conn->quote($id);
+            $quotedToken = $this->conn->quote($token);
+            
+            return $this->conn->select("SELECT COUNT(u.id_user) FROM User u WHERE 
+					u.id_user = " . $quotedID . " AND 
+					u.token = " . $quotedToken) > 0;
         }
         return false;
     }
@@ -26,9 +38,12 @@ class UserDAO {
         if ($this->conn) {
             $email = $this->conn->quote($user->email);
             $password = $this->conn->quote($user->password);
+            $token = bin2hex(openssl_random_pseudo_bytes(16));
 
-            return $this->conn->query("INSERT INTO `User` (`email`,`password`) 
-				       VALUES (" . $email . "," . $password . ")");
+            return $this->conn->query("INSERT INTO User (email, password, token) 
+				       VALUES (" . $email . "," . 
+                                                   $password . "," .
+                                                   $token . ")");
         }
         return false;
     }

@@ -11,6 +11,7 @@ app.factory('AuthService', ['$http', function ($http) {
 					function (response) {
 						console.log("Request sucess: " + response.data);
 						if (response.data !== false) {
+							scope.user = {};
 							scope.user = response.data;
 							scope.feedback = "Login realizado com sucesso.";
 						} else {

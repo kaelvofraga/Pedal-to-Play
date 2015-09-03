@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 27/08/2015 às 06:00
+-- Tempo de geração: 02/09/2015 às 03:52
 -- Versão do servidor: 5.6.21
 -- Versão do PHP: 5.6.3
 
@@ -112,6 +112,7 @@ CREATE TABLE IF NOT EXISTS `type_image` (
 
 CREATE TABLE IF NOT EXISTS `user` (
 `id_user` int(11) NOT NULL,
+  `token` varchar(100) NOT NULL,
   `subscription_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `email` varchar(100) NOT NULL,
   `name` varchar(100) DEFAULT NULL,
@@ -120,17 +121,6 @@ CREATE TABLE IF NOT EXISTS `user` (
   `address` varchar(150) DEFAULT NULL,
   `birthday` date DEFAULT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
-
---
--- Fazendo dump de dados para tabela `user`
---
-
-INSERT INTO `user` (`id_user`, `subscription_date`, `email`, `name`, `weight`, `password`, `address`, `birthday`) VALUES
-(1, '2015-08-27 03:42:36', '1@1.1', 'First', 76.1, 'e10adc3949ba59abbe56e057f20f883e', 'Nowhere 1/666', '0000-00-00');
-
---
--- Índices de tabelas apagadas
---
 
 --
 -- Índices de tabela `activitylog`
@@ -173,16 +163,6 @@ ALTER TABLE `reward`
 --
 ALTER TABLE `type_image`
  ADD PRIMARY KEY (`id_typeimage`);
-
---
--- Índices de tabela `user`
---
-ALTER TABLE `user`
- ADD PRIMARY KEY (`id_user`);
-
---
--- AUTO_INCREMENT de tabelas apagadas
---
 
 --
 -- AUTO_INCREMENT de tabela `activitylog`

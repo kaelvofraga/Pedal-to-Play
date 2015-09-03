@@ -22,7 +22,7 @@ class AuthenticationService {
         }
         return false;
     }
-
+        
     public function signUp($user) {
         //TODO: insert in DB
     }
