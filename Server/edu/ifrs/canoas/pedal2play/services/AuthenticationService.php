@@ -41,8 +41,8 @@ class AuthenticationService {
         if (($user !== null) &&
             ($user->email !== null) &&
             ($user->password !== null) &&
-            validateEmail($user->email) &&
-            validatePassword($user->password)
+            $this->validateEmail($user->email) &&
+            $this->validatePassword($user->password)
         ){              
             if($this->userDAO->insere($user))
             {

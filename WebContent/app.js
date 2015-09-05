@@ -25,7 +25,8 @@ app.config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
       'request': function (config) {
         config.headers = config.headers || {};
         if ($localStorage.user) {
-          config.headers.Authorization = $localStorage.user;
+          config.headers.Authorization = angular.toJson($localStorage.user);
+          config.withCredentials = true;
         }
         return config;
       },

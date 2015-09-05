@@ -6,6 +6,27 @@ require_once '/edu/ifrs/canoas/pedal2play/services/TokenMiddleware.php';
 
 \Slim\Slim::registerAutoloader();
 $app = new \Slim\Slim();
+$app->setName("Pedal-to-Play");
+
+if (isset($_SERVER['HTTP_ORIGIN'])) 
+{
+    header("Access-Control-Allow-Origin: {$_SERVER['HTTP_ORIGIN']}");
+    header('Access-Control-Allow-Credentials: true');
+    header('Access-Control-Max-Age: 86400'); // cache for 1 day
+}
+// Access-Control headers are received during OPTIONS requests
+if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') 
+{
+    if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_METHOD']))
+    {
+        header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
+    }
+
+    if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']))
+    {
+        header("Access-Control-Allow-Headers: {$_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']}");   
+    }        
+}
 
 $app->response()->header('Content-Type', 'application/json;charset=utf-8');
 
@@ -14,7 +35,7 @@ $app->add(new \TokenMiddleware());
 function accessIsOK() 
 {
     $app = \Slim\Slim::getInstance();
-    if ($app->athenticated)
+    if ($app->authenticated)
     {       
        return true;
     }
@@ -26,7 +47,7 @@ function accessIsOK()
 
 $app->get('/', function () 
 {
-    echo "P2P-WebAPI";   
+    echo "Welcome to P2P-WebAPI";   
 });
 
 $app->post('/signIn', function() 
@@ -37,15 +58,12 @@ $app->post('/signIn', function()
     echo json_encode($authService->signIn($user));
 });
 
-$app->post('/signUp', function() 
+$app->post('/signUp', function()
 {
-    if (accessIsOK()) 
-    {
-        $request = \Slim\Slim::getInstance()->request();
-        $user = json_decode($request->getBody());
-        $authService = new AuthenticationService();
-        echo json_encode($authService->signUp($user));
-    }
+    $request = \Slim\Slim::getInstance()->request();
+    $user = json_decode($request->getBody());
+    $authService = new AuthenticationService();
+    echo json_encode($authService->signUp($user));
 });
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ End Routes ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/

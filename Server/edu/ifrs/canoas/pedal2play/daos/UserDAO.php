@@ -45,7 +45,7 @@ class UserDAO {
         {
             $email = $this->conn->quote($user->email);
             $password = $this->conn->quote($user->password);
-            $token = bin2hex(openssl_random_pseudo_bytes(16));
+            $token = $this->conn->quote(bin2hex(openssl_random_pseudo_bytes(16)));
 
             return $this->conn->query("INSERT INTO User (email, password, token) 
 				       VALUES (" . $email . "," . 

@@ -12,10 +12,8 @@ class TokenMiddleware extends \Slim\Middleware {
      */
     public function call() 
     {
-        $request = $this->app->request;
-        $headers = $request->headers;
-        $jsonStrUser = $headers->get('Authorization');        
-        $userAuth = json_decode($jsonStrUser);
+        $jsonObject = $this->app->request()->headers()->get('Authorization');        
+        $userAuth = json_decode($jsonObject);
         $userDAO = new UserDAO();
         if (($userAuth !== null) && 
             ($userDAO->validateToken($userAuth->id_user, $userAuth->token))
