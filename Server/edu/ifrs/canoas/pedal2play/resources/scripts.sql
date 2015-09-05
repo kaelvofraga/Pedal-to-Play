@@ -117,7 +117,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `email` varchar(100) NOT NULL,
   `name` varchar(100) DEFAULT NULL,
   `weight` float DEFAULT NULL,
-  `password` varchar(100) NOT NULL,
+  `password` varchar(33) NOT NULL,
   `address` varchar(150) DEFAULT NULL,
   `birthday` date DEFAULT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;

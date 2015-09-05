@@ -52,4 +52,7 @@
 			{{isRegistering ? 'Inscreva-se' : 'Fazer Login'}}
 		</button>
 	</form>
+	<div class="alert alert-danger" role="alert" ng-show="feedback.length > 0">
+		{{feedback}}
+	</div>
 </div>

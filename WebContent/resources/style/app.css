@@ -19,11 +19,14 @@ html{
 .mini-logo{
   max-width: 32px;
   max-height: 32px;
-  /*margin-top: 16px;*/
 }
 
 .nav-purple{
   background-color: #673ab7;
   border: 0;
   border-radius: 0;
+}
+
+.btn{
+  margin-bottom: 10px;
 }

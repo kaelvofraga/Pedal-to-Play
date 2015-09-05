@@ -8,24 +8,33 @@ app.controller('AuthController', ['AuthService', '$scope', 'md5', function (Auth
   $scope.confirmPassword;
   $scope.temporaryPassword;
   $scope.feedback = '';
-
-  this.changeOperation = function () {
-    $scope.isRegistering = !$scope.isRegistering;
+    
+  this.clearFields = function () {
     $scope.authForm.$setPristine();
     $scope.authForm.$setUntouched();
-    $scope.user.password = "";
     $scope.confirmPassword = "";
     $scope.temporaryPassword = "";
+    $scope.feedback = "";
+  }
+  
+  this.changeOperation = function () {
+    $scope.isRegistering = !$scope.isRegistering;
+    this.clearFields();
   }
 
   this.signUser = function () {
     $scope.user.password = md5.createHash($scope.temporaryPassword);
+    this.clearFields();
     if ($scope.isRegistering) {
       AuthService.signUp($scope); //call register service
     } else {
       AuthService.signIn($scope); //call login service
     }
   }
+  
+  this.logout = function () {
+    AuthService.logout($scope.user);
+  };
 }]);
 
 app.directive('passwordValidator', function () {
@@ -37,7 +46,7 @@ app.directive('passwordValidator', function () {
           // consider empty models to be valid
           return true;
         }
-        if (scope.user.password === modelValue) {
+        if (scope.temporaryPassword === modelValue) {
           return true;
         }
         return false;
