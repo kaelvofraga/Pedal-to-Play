@@ -1,6 +1,7 @@
 <?php
 
 require_once (__DIR__ . '/../daos/UserDAO.php');
+define("MD5_LENGTH", 32);
 
 class AuthenticationService {
 
@@ -11,14 +12,22 @@ class AuthenticationService {
         $this->userDAO = new UserDAO();
     }
     
-    private function validateEmail($email) 
+    public function validateEmail($email) 
     {
-        return true;
+        if (filter_var($email, FILTER_VALIDATE_EMAIL))
+        {
+            $result = $this->userDAO->searchUserByEmail($email);
+            if ( ($result === false) || (count($result) === 0) )
+            {
+               return true; 
+            }           
+        }        
+        return false;
     }
 
     private function validatePassword($password) 
     {
-        return ctype_xdigit($password) && (strlen($password) == 32);
+        return ctype_xdigit($password) && (strlen($password) == MD5_LENGTH);
     }
 
     public function signIn($user) 
@@ -30,7 +39,7 @@ class AuthenticationService {
             $results = $this->userDAO->searchUser($user);    
             if (count($results) > 0) 
             {
-                return $results[0]; // returns first element in array
+                return $results[0]; //<! Returns first element in array
             }  
         }
         return false;

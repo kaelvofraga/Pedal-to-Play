@@ -7,14 +7,17 @@ require_once '/edu/ifrs/canoas/pedal2play/services/TokenMiddleware.php';
 \Slim\Slim::registerAutoloader();
 $app = new \Slim\Slim();
 $app->setName("Pedal-to-Play");
+$app->add(new \TokenMiddleware());
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Configurations ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 if (isset($_SERVER['HTTP_ORIGIN'])) 
 {
     header("Access-Control-Allow-Origin: {$_SERVER['HTTP_ORIGIN']}");
     header('Access-Control-Allow-Credentials: true');
-    header('Access-Control-Max-Age: 86400'); // cache for 1 day
+    header('Access-Control-Max-Age: 86400'); //<! Cache for 1 day
 }
-// Access-Control headers are received during OPTIONS requests
+/* Access-Control headers are received during OPTIONS requests */
 if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') 
 {
     if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_METHOD']))
@@ -24,13 +27,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS')
 
     if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']))
     {
-        header("Access-Control-Allow-Headers: {$_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']}");   
+        header("Access-Control-Allow-Headers: "
+                . "{$_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']}");   
     }        
 }
 
 $app->response()->header('Content-Type', 'application/json;charset=utf-8');
 
-$app->add(new \TokenMiddleware());
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~ End Configurations ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 function accessIsOK() 
 {
@@ -48,6 +52,12 @@ function accessIsOK()
 $app->get('/', function () 
 {
     echo "Welcome to P2P-WebAPI";   
+});
+
+$app->get('/validateEmail/:email', function ($email) 
+{
+    $authService = new AuthenticationService();
+    echo json_encode($authService->validateEmail($email));
 });
 
 $app->post('/signIn', function() 

@@ -4,9 +4,9 @@
 
 var app = angular.module('Pedal2Play', ['ui.router', 'ngMd5', 'ngStorage']);
 
-app.controller('MainController', ['$scope', function ($scope) {
-  $scope.appName = 'Pedal-to-Play';
-  $scope.SERVER_BASE_URL = 'http://localhost/Pedal-to-Play/Server/';
+app.controller('MainController', ['$rootScope', function ($rootScope) {
+  $rootScope.appName = 'Pedal-to-Play';
+  $rootScope.SERVER_BASE_URL = 'http://localhost/Pedal-to-Play/Server/';
 }]);
 
 app.config(function ($stateProvider, $urlRouterProvider, $httpProvider) {

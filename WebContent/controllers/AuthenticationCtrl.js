@@ -7,19 +7,20 @@ app.controller('AuthController', ['AuthService', '$scope', 'md5', function (Auth
   $scope.user = {};
   $scope.confirmPassword;
   $scope.temporaryPassword;
-  $scope.feedback = '';
+  $scope.errorMessage = '';
     
   this.clearFields = function () {
     $scope.authForm.$setPristine();
     $scope.authForm.$setUntouched();
     $scope.confirmPassword = "";
     $scope.temporaryPassword = "";
-    $scope.feedback = "";
+    $scope.errorMessage = "";
   }
   
   this.changeOperation = function () {
-    $scope.isRegistering = !$scope.isRegistering;
+    $scope.user.email = "";
     this.clearFields();
+    $scope.isRegistering = !$scope.isRegistering;
   }
 
   this.signUser = function () {
@@ -29,7 +30,7 @@ app.controller('AuthController', ['AuthService', '$scope', 'md5', function (Auth
       AuthService.signUp($scope); //call register service
     } else {
       AuthService.signIn($scope); //call login service
-    }
+    }      
   }
   
   this.logout = function () {
@@ -55,17 +56,23 @@ app.directive('passwordValidator', function () {
   };
 });
 
-app.directive('emailValidator', ['AuthService', function (AuthService) {
+app.directive('emailValidator', ['AuthService', '$q', function (AuthService, $q) {
   return {
     require: 'ngModel',
     link: function (scope, elm, attrs, ctrl) {
-      ctrl.$validators.isEmailAlreadyUsed = function (modelValue, viewValue) {
+      ctrl.$asyncValidators.isValidEmail = function (modelValue, viewValue) {        
+        if (scope.isRegistering === false) {
+          // just validate in registering
+          return $q.when();
+        }
+        
         if (ctrl.$isEmpty(modelValue)) {
           // consider empty models to be valid
-          return true;
+          return $q.when();
         }
-        return !AuthService.isEmailAlreadyUsed(modelValue);
-      };
+
+        return AuthService.isValidEmail(modelValue);
+      } 
     }
   };
 }]);

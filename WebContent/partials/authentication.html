@@ -13,13 +13,13 @@
 	<form name="authForm" ng-submit="authCtrl.signUser()" novalidate>
 		<div class="form-group">
 			<label for="email">Email:</label>
-			<input type="email" class="form-control" placeholder="usuario@dominio" ng-model="user.email" 
-				name="uEmail" required email-validator="isRegistering">
-			<div class="help-block" ng-show="authForm.$submitted || authForm.uEmail.$dirty">
+			<input type="email" class="form-control" placeholder="exemplo@email.com" ng-model="user.email" 
+				name="uEmail" required email-validator>
+			<div class="help-block" ng-show="authForm.$submitted || authForm.uEmail.$touched">
 				<span ng-show="authForm.uEmail.$error.required">Este campo deve ser preenchido.</span>
 				<span ng-show="authForm.uEmail.$error.email">Email inválido.</span>
-				<span ng-show="authForm.uEmail.$pending.isEmailAlreadyUsed">Verificando email...</span>
-				<span ng-show="authForm.uEmail.$error.isEmailAlreadyUsed">Este email já está sendo utilizado.</span>
+				<span ng-show="authForm.uEmail.$pending.isValidEmail">Verificando email...</span>
+				<span ng-show="authForm.uEmail.$error.isValidEmail">Email inválido ou já está sendo utilizado.</span>
 			</div>
 		</div>
 		<div class="form-group">
@@ -52,7 +52,7 @@
 			{{isRegistering ? 'Inscreva-se' : 'Fazer Login'}}
 		</button>
 	</form>
-	<div class="alert alert-danger" role="alert" ng-show="feedback.length > 0">
-		{{feedback}}
+	<div class="alert alert-danger" role="alert" ng-show="errorMessage.length > 0">
+		{{errorMessage}}
 	</div>
 </div>

@@ -25,6 +25,18 @@ class UserDAO {
         return false;
     }
     
+    public function searchUserByEmail($email) 
+    {
+        if ($this->conn) 
+        {
+            $quotedEmail = $this->conn->quote($email);
+            
+            return $this->conn->select("SELECT u.id_user FROM User u WHERE 
+					u.email = " . $quotedEmail);
+        }
+        return false;
+    }
+    
     public function validateToken($id, $token) 
     {
         if ($this->conn) 

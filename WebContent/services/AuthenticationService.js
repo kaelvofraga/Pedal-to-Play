@@ -2,27 +2,27 @@
 
 'use strict';
 
-app.factory('AuthService', ['$http', '$localStorage', '$location', function ($http, $localStorage, $location) {
+app.factory('AuthService', ['$rootScope', '$http', '$localStorage', '$location', '$q', 
+				   function ($rootScope, $http, $localStorage, $location, $q) {
 	
 	var sucessCallback = function (scope, response, messageOut) {
-		console.log("Request sucess: " + response.data);
 		if (response.data !== false) {
 			scope.user = {};
 			scope.user = angular.copy(response.data);
 			$localStorage.user = angular.copy(scope.user);
 		} else {
-			scope.feedback = messageOut;
+			scope.errorMessage = messageOut;
 		}
 	}
 	
 	var errorCallback = function (scope, error) {
 		console.log(error);
-		scope.feedback = "Falha ao tentar conectar com o servidor.";
+		scope.errorMessage = "Falha ao tentar conectar com o servidor.";
 	}	
 	
 	return {		
 		signIn: function (scope) {
-			$http.post(scope.SERVER_BASE_URL+'signIn', scope.user)
+			$http.post($rootScope.SERVER_BASE_URL+'signIn', scope.user)
 				.then(
 					function (response) {
 						sucessCallback(scope, response, "Usuário ou senha incorretos.");						
@@ -32,7 +32,7 @@ app.factory('AuthService', ['$http', '$localStorage', '$location', function ($ht
 					});
 		},		
 		signUp: function (scope) {
-			$http.post(scope.SERVER_BASE_URL + 'signUp', scope.user)
+			$http.post($rootScope.SERVER_BASE_URL + 'signUp', scope.user)
 				.then(
 					function (response) {
 						sucessCallback(scope, response, "Dados para cadastro inválidos.");						
@@ -41,8 +41,19 @@ app.factory('AuthService', ['$http', '$localStorage', '$location', function ($ht
 						errorCallback(scope, error);
 					});
 		},
-		isEmailAlreadyUsed: function (email) {
-			return false;
+		isValidEmail: function (email) {
+			return $http.get($rootScope.SERVER_BASE_URL + 'validateEmail/' + email)
+				.then(
+					function (response) {
+						if (response.data) {
+							return true;
+						}
+						return $q.reject();
+					},
+					function (error) {
+						console.log(error);
+						return $q.reject();
+					});
 		},
 		logout: function(user) {
             user = {};
