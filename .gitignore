@@ -5,3 +5,4 @@ Server/nbproject/private/private.properties
 Server/nbproject/private/private.xml
 Server/edu/ifrs/canoas/pedal2play/resources/dbconfig.ini
 Especificação/Modelo/Modelagem-TCC.asta.lock
+App/platforms/**
