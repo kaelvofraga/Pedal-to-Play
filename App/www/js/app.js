@@ -1,10 +1,13 @@
-// Ionic Starter App
+/// <reference path="typings/angularjs/angular.d.ts"/>
+
+'use strict';
+
+// Ionic Pedal2Play App
 
 // angular.module is a global place for creating, registering and retrieving Angular modules
-// 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
+// 'Pedal2Play' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-// 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic','ionic.service.core', 'starter.controllers'])
+var app = angular.module('Pedal2Play', ['ionic','ionic.service.core', 'ngMd5', 'ngStorage'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -22,52 +25,42 @@ angular.module('starter', ['ionic','ionic.service.core', 'starter.controllers'])
   });
 })
 
-.config(function($stateProvider, $urlRouterProvider) {
-  $stateProvider
-
-    .state('app', {
-    url: '/app',
-    abstract: true,
-    templateUrl: 'templates/menu.html',
-    controller: 'AppCtrl'
-  })
-
-  .state('app.search', {
-    url: '/search',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/search.html'
-      }
-    }
-  })
-
-  .state('app.browse', {
-      url: '/browse',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/browse.html'
+.config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
+    $stateProvider
+      .state('app', {
+        url: '/app',
+        abstract: true,
+        templateUrl: 'templates/menu.html',
+        controller: 'MainController'
+      })
+      .state('app.home', {
+        url: '/home',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/home.html'
+          }
         }
-      }
-    })
-    .state('app.playlists', {
-      url: '/playlists',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/playlists.html',
-          controller: 'PlaylistsCtrl'
+      });
+      
+    // if none of the above states are matched, use this as the fallback
+    $urlRouterProvider.otherwise('app/home');
+    
+    $httpProvider.interceptors.push(['$q', '$location', '$localStorage', function ($q, $location, $localStorage) {
+      return {
+        'request': function (config) {
+          config.headers = config.headers || {};
+          if ($localStorage.user) {
+            config.headers.Authorization = angular.toJson($localStorage.user);
+            config.withCredentials = true;
+          }
+          return config;
+        },
+        'responseError': function (response) {
+          if (response.status === 401) {
+            $location.path('/'); //TODO: local para redirecionar
+          }
+          return $q.reject(response);
         }
-      }
-    })
-
-  .state('app.single', {
-    url: '/playlists/:playlistId',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/playlist.html',
-        controller: 'PlaylistCtrl'
-      }
-    }
+      };
+    }]);
   });
-  // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/playlists');
-});

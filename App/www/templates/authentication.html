@@ -1,0 +1,65 @@
+<ion-modal-view ng-controller="AuthController as authCtrl">
+  <ion-header-bar>
+    <h1 class="title">{{isRegistering ? 'Inscreva-se' : 'Login'}}</h1>
+    <div class="buttons">
+      <!--button class="button button-clear" ng-click="authCtrl.changeOperation()">
+        {{isRegistering ? 'Fazer Login' : 'Inscreva-se' }}
+       </button-->
+      <button class="button button-clear" ng-click="closeLogin()">
+        Fechar
+      </button>
+    </div>
+  </ion-header-bar>
+  <ion-content>  
+    <form name="authForm" ng-submit="authCtrl.signUser()" novalidate>
+        <div class="list">
+          <label class="item item-input">
+            <span class="input-label">Email:</span>
+            <input type="email" placeholder="exemplo@email.com" ng-model="user.email" name="uEmail" required email-validator>
+            <div class="help-block" ng-show="authForm.$submitted || authForm.uEmail.$touched">
+              <span ng-show="authForm.uEmail.$error.required">Este campo deve ser preenchido.</span>
+              <span ng-show="authForm.uEmail.$error.email">Email inválido.</span>
+              <span ng-show="authForm.uEmail.$pending.isValidEmail">Verificando email <!--i class="fa fa-spinner fa-pulse"></i--></span>
+              <span ng-show="authForm.uEmail.$error.isValidEmail">Email inválido ou já está sendo utilizado.</span>
+            </div>
+          </label>
+          <label class="item item-input">
+            <span class="input-label">Senha:</span>
+            <input type="password" placeholder="6 a 30 caracteres" ng-model="temporaryPassword" 
+                   name="uPassword" minlength="6" maxlength="30" required>
+            <!--class="help-block"-->
+            <div ng-show="authForm.$submitted || authForm.uPassword.$touched">
+              <span ng-show="authForm.uPassword.$error.required">
+                Este campo deve ser preenchido.
+              </span>
+              <span ng-show="authForm.uPassword.$error.minlength || authForm.uPassword.$error.maxlength">
+                Senha inválida. Deve conter de 6 a 30 caracteres.
+              </span>
+            </div>
+          </label>
+          <label class="item item-input" ng-show="isRegistering">
+            <span class="input-label">Confirmar senha:</span>
+            <input type="password" placeholder="Digite a senha novamente" ng-model="confirmPassword" 
+                   ng-required="isRegistering" name="uConfirmPassword" password-validator>
+            <!--class="help-block"-->
+            <div ng-show="authForm.$submitted || authForm.uConfirmPassword.$touched">
+              <span ng-show="authForm.uConfirmPassword.$error.required">
+                Este campo deve ser preenchido.
+              </span>
+              <span ng-show="authForm.uConfirmPassword.$error.comparePasswords">
+                As senhas digitadas são diferentes.
+              </span>
+            </div>
+          </label>
+          <label class="item">
+            <button type="submit" class="button button-block button-positive" ng-disabled="authForm.$invalid">
+              {{isRegistering ? 'Inscreva-se' : 'Fazer Login'}}
+            </button>
+          </label>
+        </div> 
+      </form>
+      <!--div class="alert alert-danger" role="alert" ng-show="errorMessage.length > 0">
+        {{errorMessage}}
+      </div-->  
+  </ion-content>
+</ion-modal-view>
