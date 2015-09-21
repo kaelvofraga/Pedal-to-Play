@@ -1,8 +1,8 @@
 <?php
 
-require_once '/edu/ifrs/canoas/pedal2play/resources/Slim/Slim/Slim.php';
-require_once '/edu/ifrs/canoas/pedal2play/services/AuthenticationService.php';
-require_once '/edu/ifrs/canoas/pedal2play/services/TokenMiddleware.php';
+require_once (__DIR__ . '/edu/ifrs/canoas/pedal2play/resources/Slim/Slim/Slim.php');
+require_once (__DIR__ . '/edu/ifrs/canoas/pedal2play/services/AuthenticationService.php');
+require_once (__DIR__ . '/edu/ifrs/canoas/pedal2play/services/TokenMiddleware.php');
 
 \Slim\Slim::registerAutoloader();
 $app = new \Slim\Slim();
