@@ -18,17 +18,13 @@
       .state('app', {
         url: '/app',
         abstract: true,
-        templateUrl: 'partials/main-menu.html',
+        templateUrl: 'partials/menu.html',
         controller: 'MainController',
         controllerAs: 'mainCtrl'
       })
       .state('app.home', {
         url: '/home',
-        views: {
-          'menuContent': {
-            templateUrl: 'partials/home.html'
-          }
-        }   
+        templateUrl: 'partials/menu.home.html'  
       });
     
     $urlRouterProvider.otherwise('/app/home');
