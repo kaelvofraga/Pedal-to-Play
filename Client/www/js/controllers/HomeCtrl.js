@@ -3,7 +3,7 @@
 (function () { 
   'use strict';
   
-  angular.module('homeControllers', [])
+  angular.module('Pedal2Play')
     .controller('HomeController', ['$scope', 'GeoService', function ($scope, GeoService) 
     {
       var intervalId = setInterval(function () {

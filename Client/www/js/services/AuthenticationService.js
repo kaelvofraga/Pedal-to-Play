@@ -4,14 +4,14 @@
 	'use strict';
 
 	angular.module('Pedal2Play')
-	.factory('AuthService', ['$rootScope', '$http', '$localStorage', '$state', '$q', 
-					function ($rootScope, $http, $localStorage, $state, $q) {
+	.factory('AuthService', ['$rootScope', '$http', 'localStorageService', '$state', '$q', 
+					function ($rootScope, $http, localStorageService, $state, $q) {
 		
 		var sucessCallback = function (scope, response, messageOut) {
 			if (response.data !== false) {
 				scope.user = {};
 				scope.user = angular.copy(response.data);
-				$localStorage.user = angular.copy(scope.user);
+				localStorageService.set('user', angular.copy(scope.user));
 				$state.go('app.home');
 			} else {
 				scope.errorMessage = messageOut;
@@ -59,7 +59,7 @@
 						});
 			},
 			logout: function() {
-				delete $localStorage.user;
+				localStorageService.remove('user');
 				$state.go('auth');
 			}
 		};

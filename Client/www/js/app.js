@@ -6,11 +6,8 @@
   angular.module('Pedal2Play', [
     'ui.router', 
     'ngMd5', 
-    'ngStorage', 
-    'ngTouch', 
-    'authControllers', 
-    'mainControllers',
-    'homeControllers'
+    'LocalStorageModule', 
+    'ngTouch'
   ])   
   .config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
   
@@ -37,12 +34,12 @@
     
     $urlRouterProvider.otherwise('/app/home');
     
-    $httpProvider.interceptors.push(['$q', '$location', '$localStorage', function ($q, $location, $localStorage) {
+    $httpProvider.interceptors.push(['$q', '$location', 'localStorageService', function ($q, $location, localStorageService) {
       return {
         'request': function (config) {
           config.headers = config.headers || {};
-          if ($localStorage.user) {
-            config.headers.Authorization = angular.toJson($localStorage.user);
+          if (localStorageService.get('user')) {
+            config.headers.Authorization = angular.toJson(localStorageService.get('user'));
             config.withCredentials = true;
           }
           return config;

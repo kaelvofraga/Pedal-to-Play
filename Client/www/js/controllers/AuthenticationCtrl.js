@@ -3,7 +3,7 @@
 (function () { 
   'use strict';
   
-  angular.module('authControllers', [])
+  angular.module('Pedal2Play')
     .controller('AuthController', ['AuthService', '$scope', 'md5', function (AuthService, $scope, md5) {
       $scope.isRegistering = false;
       $scope.user = {};

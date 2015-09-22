@@ -10,8 +10,7 @@ Server/edu/ifrs/canoas/pedal2play/resources/dbconfig.ini
 Especificação/Modelo/Modelagem-TCC.asta.lock
 
 # PhoneGap files and directories
-Client/.DS_Store
 Client/platforms/**
+!Client/platforms/android/AndroidManifest.xml
 Client/plugins/**
 Client/hooks/**
-Client/.cordova

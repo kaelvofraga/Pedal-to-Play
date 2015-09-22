@@ -3,9 +3,9 @@
 (function () { 
   'use strict';
   
-  angular.module('mainControllers', [])
-    .controller('MainController', ['AuthService', '$rootScope', '$state', '$localStorage',
-      function (AuthService, $rootScope, $state, $localStorage) {
+  angular.module('Pedal2Play')
+    .controller('MainController', ['AuthService', '$rootScope', '$state', 'localStorageService',
+      function (AuthService, $rootScope, $state, localStorageService) {
 
         $rootScope.appName = 'Pedal-to-Play';
         $rootScope.SERVER_BASE_URL = 'http://localhost/Pedal-to-Play/Server/';
@@ -31,13 +31,14 @@
         $rootScope.$on('$routeChangeStart', function (event, next, current) {
           angular.element('.navmenu').offcanvas('hide');
         });
-
-        $rootScope.$on("$locationChangeStart", function (event, next, current) {
-          if ($localStorage.user === undefined) {
-            event.preventDefault();
-            $state.go('auth');
-          }
-        });
+        
+        $rootScope.$on('$stateChangeStart',
+          function (event, toState, toParams, fromState, fromParams) {
+            if ((localStorageService.get('user') === null) && (toState.name !== 'auth')) {
+              event.preventDefault();
+              $state.go('auth');
+            }
+          })
 
         $rootScope.showPushMenu = function () {
           angular.element('.navmenu').offcanvas('show');
