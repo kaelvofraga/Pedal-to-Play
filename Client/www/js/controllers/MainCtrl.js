@@ -26,12 +26,11 @@
           }
         ];
 
-        $rootScope.$on('$routeChangeStart', function (event, next, current) {
-          angular.element('.navmenu').offcanvas('hide');
-        });
-        
         $rootScope.$on('$stateChangeStart',
-          function (event, toState, toParams, fromState, fromParams) {
+          function (event, toState, toParams, fromState, fromParams) 
+          {            
+            angular.element('.navmenu').offcanvas('hide');
+            
             if ((localStorageService.get('user') === null) && (toState.name !== 'auth')) {
               event.preventDefault();
               $state.go('auth');
