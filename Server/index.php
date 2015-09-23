@@ -54,13 +54,13 @@ $app->get('/', function ()
     echo "Welcome to P2P-WebAPI";   
 });
 
-$app->get('/validateEmail/:email', function ($email) 
+$app->get('/validateemail/:email', function ($email) 
 {
     $authService = new AuthenticationService();
     echo json_encode($authService->validateEmail($email));
 });
 
-$app->post('/signIn', function() 
+$app->post('/signin', function() 
 {
     $request = \Slim\Slim::getInstance()->request();
     $user = json_decode($request->getBody());
@@ -68,7 +68,7 @@ $app->post('/signIn', function()
     echo json_encode($authService->signIn($user));
 });
 
-$app->post('/signUp', function()
+$app->post('/signup', function()
 {
     $request = \Slim\Slim::getInstance()->request();
     $user = json_decode($request->getBody());

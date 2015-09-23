@@ -8,7 +8,7 @@
       function (AuthService, $rootScope, $state, localStorageService) {
 
         $rootScope.appName = 'Pedal-to-Play';
-        $rootScope.SERVER_BASE_URL = 'http://localhost/Pedal-to-Play/Server/';
+        $rootScope.SERVER_BASE_URL = 'http://pedal2play.kaelfraga.com/';
         $rootScope.navbarTitle = $rootScope.appName;
 
         this.menuItens = [
@@ -26,8 +26,6 @@
           }
         ];
 
-        angular.element('.navmenu').offcanvas({ 'toggle': false});
-
         $rootScope.$on('$routeChangeStart', function (event, next, current) {
           angular.element('.navmenu').offcanvas('hide');
         });
@@ -39,13 +37,5 @@
               $state.go('auth');
             }
           })
-
-        $rootScope.showPushMenu = function () {
-          angular.element('.navmenu').offcanvas('show');
-        };
-        
-        $rootScope.hidePushMenu = function () {
-          angular.element('.navmenu').offcanvas('hide');
-        };
       }]);
 })();
