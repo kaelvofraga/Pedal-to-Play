@@ -8,7 +8,9 @@
       function (AuthService, $rootScope, $state, localStorageService) {
 
         $rootScope.appName = 'Pedal-to-Play';
-        $rootScope.SERVER_BASE_URL = 'http://pedal2play.kaelfraga.com/';
+        $rootScope.SERVER_BASE_URL = 
+          //'http://localhost/Pedal-to-Play/Server/'; /* Development */
+          'http://pedal2play.kaelfraga.com/'; /* Production */
         $rootScope.navbarTitle = $rootScope.appName;
 
         this.menuItens = [

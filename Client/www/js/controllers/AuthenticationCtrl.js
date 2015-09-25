@@ -59,6 +59,7 @@
         require: 'ngModel',
         link: function (scope, elm, attrs, ctrl) {
           ctrl.$asyncValidators.isValidEmail = function (modelValue, viewValue) {
+                       
             if (scope.isRegistering === false) {
               // just validate in registering
               return $q.when();
@@ -68,8 +69,8 @@
               // consider empty models to be valid
               return $q.when();
             }
-
-            return AuthService.isValidEmail(modelValue);
+            
+            return AuthService.isValidEmail(modelValue);       
           }
         }
       };

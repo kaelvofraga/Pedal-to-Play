@@ -25,17 +25,17 @@
 		
 		return {		
 			signIn: function (scope) {
-				$http.post($rootScope.SERVER_BASE_URL + 'signIn', scope.user)
+				$http.post($rootScope.SERVER_BASE_URL + 'signin', scope.user)
 					.then(
 						function (response) {
-							sucessCallback(scope, response, "Usuário ou senha incorretos.");						
+							sucessCallback(scope, response, "Usuário ou senha incorretos.");
 						},
 						function (error) {
 							errorCallback(scope, error);
-						});
+						});				
 			},		
 			signUp: function (scope) {
-				$http.post($rootScope.SERVER_BASE_URL + 'signUp', scope.user)
+				$http.post($rootScope.SERVER_BASE_URL + 'signup', scope.user)
 					.then(
 						function (response) {
 							sucessCallback(scope, response, "Dados para cadastro inválidos.");						
@@ -45,7 +45,7 @@
 						});
 			},
 			isValidEmail: function (email) {
-				return $http.get($rootScope.SERVER_BASE_URL + 'validateEmail/' + email)
+				return $http.get($rootScope.SERVER_BASE_URL + 'validateemail/' + email)
 					.then(
 						function (response) {
 							if (response.data) {

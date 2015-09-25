@@ -14,7 +14,7 @@
 		<div class="form-group">
 			<label for="email">Email:</label>
 			<input type="email" class="form-control" placeholder="exemplo@email.com" ng-model="user.email" 
-				name="uEmail" required email-validator>
+				name="uEmail" ng-model-options="{ debounce: 750 }" required email-validator>
 			<div class="help-block" ng-show="authForm.$submitted || authForm.uEmail.$touched">
 				<span ng-show="authForm.uEmail.$error.required">Este campo deve ser preenchido.</span>
 				<span ng-show="authForm.uEmail.$error.email">Email inválido.</span>
