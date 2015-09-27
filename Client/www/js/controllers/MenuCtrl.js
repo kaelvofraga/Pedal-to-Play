@@ -8,7 +8,11 @@
                           function (AuthService, $scope, $state, $window, localStorageService) {
         
         $scope.navbarTitle = $state.current.data. pageTitle;
-
+        
+        if (localStorageService.get('user') === null) {
+          $state.go('auth');
+        }
+        
         this.menuItens = [
           {
             name: 'Home',
@@ -37,11 +41,11 @@
         
         angular.element('.navmenu').on('show.bs.offcanvas', function (e) {
           angular.element('#menuContainer').addClass('blur');
-        })
+        });
         
         angular.element('.navmenu').on('hide.bs.offcanvas', function (e) {
           angular.element('#menuContainer').removeClass('blur');
-        })        
+        });        
         
         $scope.$on('$stateChangeStart',
           function (event, toState, toParams, fromState, fromParams) {  
@@ -51,10 +55,11 @@
               event.preventDefault();
               $state.go('auth');
             }
-         });          
+         });      
           
         angular.element($window).bind('resize', function () {
           angular.element('.navmenu').offcanvas('hide');
+          angular.element('#menuContainer').removeClass('blur');
           $scope.$apply();
         });        
       }]);

@@ -11,7 +11,7 @@
 			{{isRegistering ? 'Inscreva-se' : 'Login'}}
 	</h1>
 	<form name="authForm" ng-submit="authCtrl.signUser()" novalidate>
-		<div class="form-group">
+		<div class="form-group form-group-lg">
 			<label for="email">Email:</label>
 			<input type="email" class="form-control" placeholder="exemplo@email.com" ng-model="user.email" 
 				name="uEmail" ng-model-options="{ debounce: 750 }" required email-validator>
@@ -22,7 +22,7 @@
 				<span ng-show="authForm.uEmail.$error.isValidEmail">Email inválido ou já está sendo utilizado.</span>
 			</div>
 		</div>
-		<div class="form-group">
+		<div class="form-group form-group-lg">
 			<label for="password">Senha:</label>
 			<input type="password" class="form-control" placeholder="6 a 30 caracteres" ng-model="temporaryPassword" 
 				name="uPassword" minlength="6" maxlength="30" required>
@@ -35,7 +35,7 @@
 				</span>
 			</div>
 		</div>
-		<div class="form-group" ng-show="isRegistering">
+		<div class="form-group form-group-lg" ng-show="isRegistering">
 			<label for="confirm_password">Confirmar senha:</label>
 			<input type="password" class="form-control" placeholder="Digite a senha novamente" ng-model="confirmPassword"
 				 ng-required="isRegistering" name="uConfirmPassword" password-validator>
