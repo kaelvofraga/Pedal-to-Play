@@ -33,9 +33,6 @@ html{
 .nav-purple ul{
   background-color: #673ab7;
 }
-.nav-purple a{
-  color: lightgray !important;
-}
 .nav-purple .navbar-toggle{
   border: 0 !important;
   margin-top: 8px !important;
@@ -46,20 +43,35 @@ html{
 }
 .navbar-default .navbar-nav > .open > a, 
 .navbar-default .navbar-nav > .open > a:focus, 
-.nav-purple .navbar-toggle:focus,
-.nav-purple .navbar-toggle:hover,
 .nav-purple a:focus, 
 .nav-purple .active > a{
   background-color: #512e90 !important;
 }
-.navbar-default .navbar-nav > .open > a:hover, 
+.navbar-default .navbar-nav > .open > a:hover,
 .nav-purple .navbar-toggle:hover,
+.nav-purple .navbar-toggle:focus, 
 .nav-purple a:hover{
-  color: white !important;
+  background-color: #c2b0e2 !important;
 }
 .nav-purple .navbar-toggle .icon-bar{
   background-color: white !important;
 }
 .navmenu{
   max-width: 60% !important;
+}
+.nav-purple a,
+.navmenu .fa{
+  color: white !important;
+}
+
+#menuContainer{
+  margin-top: 48px;
+}
+
+.blur{
+    -webkit-filter: blur(1px);
+    -moz-filter: blur(1px);
+    -o-filter: blur(1px);
+    -ms-filter: blur(1px);
+    filter: blur(1px);
 }

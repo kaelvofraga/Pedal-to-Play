@@ -8,7 +8,15 @@
     'ngMd5', 
     'LocalStorageModule', 
     'ngTouch'
-  ])   
+  ]) 
+  
+  .controller('MainController', ['$rootScope', function ($rootScope){    
+    $rootScope.appName = 'Pedal-to-Play';
+    $rootScope.SERVER_BASE_URL = 
+        //'http://localhost/Pedal-to-Play/Server/'; /* Development */
+        'http://pedal2play.kaelfraga.com/'; /* Production */   
+  }])
+    
   .config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
   
     $stateProvider
@@ -22,14 +30,15 @@
         url: '/app',
         abstract: true,
         templateUrl: 'partials/menu.html',
-        controller: 'MainController',
-        controllerAs: 'mainCtrl'
+        controller: 'MenuController',
+        controllerAs: 'menuCtrl'
       })
       .state('app.home', {
         url: '/home',
         templateUrl: 'partials/menu.home.html',
         controller: 'HomeController',
-        controllerAs: 'homeCtrl'       
+        controllerAs: 'homeCtrl',
+        data: { pageTitle: 'Pedal-to-Play' }         
       });
     
     $urlRouterProvider.otherwise('/app/home');
@@ -51,6 +60,6 @@
           return $q.reject(response);
         }
       };
-    }]);
+    }]);    
   });
 })();
