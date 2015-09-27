@@ -8,6 +8,10 @@ require_once (__DIR__ . '/edu/ifrs/canoas/pedal2play/services/TokenMiddleware.ph
 $app = new \Slim\Slim();
 $app->setName("Pedal-to-Play");
 $app->add(new \TokenMiddleware());
+$app->response()->header('Content-Type', 'application/json;charset=utf-8');
+$app->log->setEnabled(true);
+$app->log->setLevel(\Slim\Log::DEBUG);
+$app->environment['slim.errors'] = fopen(__DIR__ .'/log.txt', 'w');
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Configurations ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
@@ -17,22 +21,19 @@ if (isset($_SERVER['HTTP_ORIGIN']))
     header('Access-Control-Allow-Credentials: true');
     header('Access-Control-Max-Age: 86400'); //<! Cache for 1 day
 }
+
 /* Access-Control headers are received during OPTIONS requests */
 if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') 
 {
-    if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_METHOD']))
+    // return only the headers and not the content
+    if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_METHOD']) && 
+        isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_METHOD'])) 
     {
+        header('Access-Control-Allow-Headers: content-type');
         header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
     }
-
-    if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']))
-    {
-        header("Access-Control-Allow-Headers: "
-                . "{$_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']}");   
-    }        
+    exit;    
 }
-
-$app->response()->header('Content-Type', 'application/json;charset=utf-8');
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~ End Configurations ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
@@ -73,7 +74,7 @@ $app->post('/signup', function()
     $request = \Slim\Slim::getInstance()->request();
     $user = json_decode($request->getBody());
     $authService = new AuthenticationService();
-    echo json_encode($authService->signUp($user));
+    echo json_encode($authService->signUp($user));    
 });
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ End Routes ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/

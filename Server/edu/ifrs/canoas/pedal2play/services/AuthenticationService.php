@@ -17,7 +17,7 @@ class AuthenticationService {
         if (filter_var($email, FILTER_VALIDATE_EMAIL))
         {
             $result = $this->userDAO->searchUserByEmail($email);
-            if ( ($result === false) || (count($result) === 0) )
+            if ( ($result !== false) || (count($result) === 0) )
             {
                return true; 
             }           
@@ -37,12 +37,13 @@ class AuthenticationService {
             $user->password !== null) 
         {              
             $results = $this->userDAO->searchUser($user);    
-            if (count($results) > 0) 
+            if ( $results && (count($results) > 0) )
             {
                 return $results[0]; //<! Returns first element in array
-            }  
+            }
+            return array("error" => "Search user failed.");
         }
-        return false;
+        return array("error" => "Invalid values.");
     }
         
     public function signUp($user) 
@@ -57,7 +58,8 @@ class AuthenticationService {
             {
                 return $this->userDAO->searchUser($user)[0];
             }
+            return array("error" => "Insert new user failed.");
         }
-        return false;
+        return array("error" => "Invalid values.");
     }
 }

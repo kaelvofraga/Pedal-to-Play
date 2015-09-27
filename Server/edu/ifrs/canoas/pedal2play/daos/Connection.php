@@ -37,7 +37,10 @@ class Connection {
     public function connect() {
         if (!isset(self::$connection)) {
             $config = parse_ini_file(__DIR__ . '/../resources/dbconfig.ini');
-            self::$connection = new mysqli($config['host'], $config['username'], $config['password'], $config['dbname']);
+            self::$connection = new mysqli($config['host'], 
+                                           $config['username'], 
+                                           $config['password'], 
+                                           $config['dbname']);
         }
 
         if (self::$connection === false) {

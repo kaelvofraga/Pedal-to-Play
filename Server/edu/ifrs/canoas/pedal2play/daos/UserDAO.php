@@ -18,11 +18,11 @@ class UserDAO {
             $email = $this->conn->quote($user->email);
             $password = $this->conn->quote($user->password);
             
-            return $this->conn->select("SELECT u.id_user, u.token FROM User u WHERE 
+            return $this->conn->select("SELECT u.id_user, u.token FROM user u WHERE 
 					u.email = " . $email . " AND 
 					u.password = " . $password);
         }
-        return false;
+        return array("error" => "Null connection.");
     }
     
     public function searchUserByEmail($email) 
@@ -31,10 +31,10 @@ class UserDAO {
         {
             $quotedEmail = $this->conn->quote($email);
             
-            return $this->conn->select("SELECT u.id_user FROM User u WHERE 
+            return $this->conn->select("SELECT u.id_user FROM user u WHERE 
 					u.email = " . $quotedEmail);
         }
-        return false;
+        return array("error" => "Null connection.");
     }
     
     public function validateToken($id, $token) 
@@ -44,11 +44,11 @@ class UserDAO {
             $quotedID = $this->conn->quote($id);
             $quotedToken = $this->conn->quote($token);
             
-            return $this->conn->select("SELECT COUNT(u.id_user) FROM User u WHERE 
+            return $this->conn->select("SELECT COUNT(u.id_user) FROM user u WHERE 
 					u.id_user = " . $quotedID . " AND 
 					u.token = " . $quotedToken) > 0;
         }
-        return false;
+        return array("error" => "Null connection.");
     }
 
     public function insere($user) 
@@ -59,12 +59,12 @@ class UserDAO {
             $password = $this->conn->quote($user->password);
             $token = $this->conn->quote(bin2hex(openssl_random_pseudo_bytes(16)));
 
-            return $this->conn->query("INSERT INTO User (email, password, token) 
+            return $this->conn->query("INSERT INTO user (email, password, token) 
 				       VALUES (" . $email . "," . 
                                                    $password . "," .
                                                    $token . ")");
         }
-        return false;
+        return array("error" => "Null connection.");
     }
 
     public function update($user) 
