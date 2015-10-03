@@ -1,6 +1,7 @@
 <?php
 
 require_once 'Connection.php';
+define('TOKEN_BYTES', 16);
 
 class UserDAO {
 
@@ -57,12 +58,16 @@ class UserDAO {
         {
             $email = $this->conn->quote($user->email);
             $password = $this->conn->quote($user->password);
-            $token = $this->conn->quote(bin2hex(openssl_random_pseudo_bytes(16)));
-
-            return $this->conn->query("INSERT INTO user (email, password, token) 
+            $token = $this->conn->quote(bin2hex(openssl_random_pseudo_bytes(TOKEN_BYTES)));
+            $currentDate = $this->conn->quote((new DateTime())->format('Y-m-d H:i:s'));
+            return $this->conn->query("INSERT INTO user (email, 
+                                                         password, 
+                                                         token, 
+                                                         subscription_date) 
 				       VALUES (" . $email . "," . 
                                                    $password . "," .
-                                                   $token . ")");
+                                                   $token . "," .
+                                                   $currentDate . ")");
         }
         return array("error" => "Null connection.");
     }

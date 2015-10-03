@@ -17,7 +17,7 @@ class AuthenticationService {
         if (filter_var($email, FILTER_VALIDATE_EMAIL))
         {
             $result = $this->userDAO->searchUserByEmail($email);
-            if ( ($result !== false) || (count($result) === 0) )
+            if ( ($result !== false) && (count($result) === 0) )
             {
                return true; 
             }           
