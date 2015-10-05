@@ -117,6 +117,24 @@ CREATE TABLE IF NOT EXISTS `user` (
 -- --------------------------------------------------------
 
 --
+-- Estrutura para tabela `user_reward`
+--
+
+CREATE TABLE IF NOT EXISTS `user_reward` (
+  `id_user` int(11) NOT NULL PRIMARY KEY,
+  `id_reward` int(11) NOT NULL PRIMARY KEY
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Restrições para tabelas `user_reward`
+--
+ALTER TABLE `user_reward`
+ADD CONSTRAINT `user_reward_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `user` (`id_user`),
+ADD CONSTRAINT `user_reward_ibfk_2` FOREIGN KEY (`id_reward`) REFERENCES `reward` (`id_reward`);
+
+--
 -- Restrições para tabelas `activitylog`
 --
 ALTER TABLE `activitylog`
