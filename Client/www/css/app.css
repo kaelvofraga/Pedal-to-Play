@@ -48,7 +48,13 @@ body{
   margin-left: 10px !important;
 }
 .nav-purple .navmenu-brand{
-  margin: 5px 0px!important;
+  margin: 5px 10px !important;
+} 
+@media (min-width: 768px) { 
+  .nav-purple .navmenu-brand{ 
+    font-weight: bold !important;
+    font-size: 20px !important;
+  }
 }
 .navbar-default .navbar-nav > .open > a, 
 .navbar-default .navbar-nav > .open > a:focus, 
@@ -85,3 +91,26 @@ body{
     filter: blur(1px);
 }
 
+.nav-tabs {
+    width: 100%;
+    border-bottom: 0;
+}
+.nav-tabs > li {
+    display: table-cell;
+    width: 1%;
+    float: none;
+}
+.nav-tabs > li > a {
+    margin-bottom: 5px !important;
+    text-align: center !important;
+    border-bottom: 1px solid #ddd !important;
+    border-radius: 4px 4px 0 0 !important;
+    margin-right: 0 !important;  
+}
+.nav-tabs > li.active > a{
+    border-bottom: none !important;
+}
+.nav-tabs > .dropdown .dropdown-menu {
+    top: auto !important;
+    left: auto !important;
+}

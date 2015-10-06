@@ -4,7 +4,7 @@
 	'use strict';
 
   angular.module('Pedal2Play')
-  .factory('GeoService', ['$rootScope', 'CordovaMainService', 
+  .factory('TrackService', ['$rootScope', 'CordovaMainService', 
                 function ($rootScope, CordovaMainService) {
     return {
       getCurrentPosition: CordovaMainService.cordovaReady( function (onSuccess, onError, options) 

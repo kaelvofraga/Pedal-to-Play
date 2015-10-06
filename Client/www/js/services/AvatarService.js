@@ -4,8 +4,8 @@
   'use strict';
   
   angular.module('Pedal2Play')
-    .controller('HomeController', ['$scope', function ($scope) 
-    {
-           
+    .factory('AvatarService', ['$http', function ($http) 
+    {   
+        
     }]);
 })();

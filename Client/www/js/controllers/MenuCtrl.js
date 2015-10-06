@@ -6,8 +6,12 @@
   angular.module('Pedal2Play')
     .controller('MenuController', ['AuthService', '$scope', '$state', '$window', 'localStorageService',
                           function (AuthService, $scope, $state, $window, localStorageService) {
-        
-        $scope.navbarTitle = $state.current.data. pageTitle;
+                
+        $scope.$watch(function () { return $state.current.data.pageTitle }, function (newValue, oldValue) {
+          if (typeof newValue !== 'undefined') {
+            $scope.navbarTitle = $state.current.data.pageTitle;
+          }
+        });
         
         if (localStorageService.get('user') === null) {
           $state.go('auth');
@@ -19,6 +23,20 @@
             icon: 'fa fa-home',
             action: function () {
               $state.go('app.home');
+            }
+          },
+          {
+            name: 'Pedalada',
+            icon: 'fa fa-bicycle',
+            action: function () {
+              $state.go('app.tracking');
+            }
+          },
+          {
+            name: 'Avatar',
+            icon: 'fa fa-user',
+            action: function () {
+              $state.go('app.avatar');
             }
           },
           {

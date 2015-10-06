@@ -39,6 +39,20 @@
         controller: 'HomeController',
         controllerAs: 'homeCtrl',
         data: { pageTitle: 'Pedal-to-Play' }         
+      })
+      .state('app.avatar', {
+        url: '/avatar',
+        templateUrl: 'partials/menu.avatar.html',
+        controller: 'AvatarController',
+        controllerAs: 'avatarCtrl',
+        data: { pageTitle: 'Customização do Avatar' }         
+      })
+      .state('app.tracking', {
+        url: '/tracking',
+        templateUrl: 'partials/menu.tracking.html',
+        controller: 'TrackingController',
+        controllerAs: 'trackCtrl',
+        data: { pageTitle: 'Monitorando Pedalada' }
       });
     
     $urlRouterProvider.otherwise('/app/home');

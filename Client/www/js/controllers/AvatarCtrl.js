@@ -4,7 +4,7 @@
   'use strict';
   
   angular.module('Pedal2Play')
-    .controller('HomeController', ['$scope', function ($scope) 
+    .controller('AvatarController', ['$scope', function ($scope) 
     {
            
     }]);
