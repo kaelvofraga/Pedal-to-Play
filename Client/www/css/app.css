@@ -48,7 +48,7 @@ body{
   margin-left: 10px !important;
 }
 .nav-purple .navmenu-brand{
-  margin: 5px 10px !important;
+  margin: 1px 10px !important;
 } 
 @media (min-width: 768px) { 
   .nav-purple .navmenu-brand{ 
@@ -101,7 +101,7 @@ body{
     float: none;
 }
 .nav-tabs > li > a {
-    margin-bottom: 5px !important;
+    margin-bottom: 1px !important;
     text-align: center !important;
     border-bottom: 1px solid #ddd !important;
     border-radius: 4px 4px 0 0 !important;
@@ -114,3 +114,48 @@ body{
     top: auto !important;
     left: auto !important;
 }
+
+.img-logo {
+  width: 32px;
+  height: auto;
+  display: inline-block;
+}
+
+#avatarDiv button { 
+  /* From "Dig Deep Into CSS Linear Gradients" (TUDOR, 2013)   
+     http://hugogiraudel.com/2013/02/04/css-gradients/ */
+  background: 
+    linear-gradient(36deg, #272b66 42.34%, transparent 42.34%),
+    linear-gradient(72deg, #2d559f 75.48%, transparent 75.48%),
+    linear-gradient(-36deg, #9ac147 42.34%, transparent 42.34%) 100% 0,
+    linear-gradient(-72deg, #639b47 75.48%, transparent 75.48%) 100% 0, 
+    linear-gradient(36deg, transparent 57.66%, #e1e23b 57.66%) 100% 100%,
+    linear-gradient(72deg, transparent 24.52%, #f7941e 24.52%) 100% 100%,
+    linear-gradient(-36deg, transparent 57.66%, #662a6c 57.66%) 0 100%,
+    linear-gradient(-72deg, transparent 24.52%, #9a1d34 24.52%) 0 100%, 
+    #43a1cd linear-gradient(#ba3e2e, #ba3e2e) 50% 100%;
+  background-repeat: no-repeat;
+  background-size: 50% 50%;
+  color: white !important;                                        
+}
+
+.flex-footer {
+  display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	flex-direction: row;
+  align-items: center;
+}
+.flex-footer > .flex-item {
+	-webkit-flex: auto;
+	flex: auto;
+}
+
+#avatar-share {
+  text-align: center; 
+}
+
+.circle-button {
+  border-radius: 50% !important;
+}
+
