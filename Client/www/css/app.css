@@ -48,7 +48,7 @@ body{
   margin-left: 10px !important;
 }
 .nav-purple .navmenu-brand{
-  margin: 1px 10px !important;
+  margin: 5px 10px !important;
 } 
 @media (min-width: 768px) { 
   .nav-purple .navmenu-brand{ 
