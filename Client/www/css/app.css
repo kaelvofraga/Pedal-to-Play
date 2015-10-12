@@ -138,10 +138,24 @@ body{
   z-index: 2;                                        
 }
 #avatarDiv .avatar{
-  /*margin: 0 auto !important;*/
-  height: 320px;
+  height: 600px;
   width: auto;
   z-index: 1;
+} 
+@media (max-height: 700px) { 
+  #avatarDiv .avatar{ 
+    height: 300px;
+  }
+} 
+@media (max-height: 600px) { 
+  #avatarDiv .avatar{ 
+    height: 240px;
+  }
+}
+@media (max-height: 500px) { 
+  #avatarDiv .avatar{ 
+    height: 180px;
+  }
 }
 
 .flex-footer {
