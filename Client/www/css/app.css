@@ -115,12 +115,6 @@ body{
     left: auto !important;
 }
 
-.img-logo {
-  width: 32px;
-  height: auto;
-  display: inline-block;
-}
-
 #avatarDiv button { 
   /* From "Dig Deep Into CSS Linear Gradients" (TUDOR, 2013)   
      http://hugogiraudel.com/2013/02/04/css-gradients/ */
