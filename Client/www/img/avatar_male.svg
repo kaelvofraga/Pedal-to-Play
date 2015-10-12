@@ -7,7 +7,6 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="340"
@@ -27,10 +26,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.49497474"
-     inkscape:cx="157.69451"
+     inkscape:cx="-140.30049"
      inkscape:cy="495.23591"
      inkscape:document-units="px"
-     inkscape:current-layer="layer2"
+     inkscape:current-layer="layer10"
      showgrid="false"
      inkscape:window-width="1366"
      inkscape:window-height="705"
@@ -48,30 +47,10 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
-  <g
-     inkscape:groupmode="layer"
-     id="layer2"
-     inkscape:label="modelo"
-     style="display:none"
-     transform="translate(0,-1953.2598)">
-    <image
-       y="1954.6532"
-       x="0.8356331"
-       id="image3352"
-       xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAABBCAYAAAAt36+DAAAAAXNSR0IArs4c6QAAAARnQU1BAACx jwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAANXSURBVFhH7ZXBkdswDEVTSkpxKVuKS0kpW4pL yD0Hhw/Lz0AQQFGxNskhfwZjiQT+IyhK/vL8CzoNfbvddnFWy1DM7y3e31p8uz8f73f75Z7xM/Al KIYe5uN3wEtQ6zABDqgDr+gQGrsckABTrHS7Bu2Ax+Mjnj++j7AxFnNiiw+hGBmQ7QzACnykNWgz y7r8FKgH8qvnK3g2zu8R+BB6+7o1434cohbc+8Xpfqa1g9QMvandA22/flHEJQcJYYSxYvc8e6wA 0TLUTnAz1q/Cj18KRdpSAJgrBGR+VUtQnhsAOzBJp4wzT96KDqEbYOvGA6rxI5VQimVo29e3UOaK KmcGT6ERqK0cH4Q2ZvN9zp/kFXAKpQMKDda/ucOwCOUon3p8MtVQjPieOsPs3Yxjvm4ZypbYtvat tY6bicwHpBjzdUS2xTuonhWxea7NcHTYzXdjHRY9ojZQdSkT7vV8ZbIxTsbJp04LYix2u4e2Ym2V oAQQHwL7UK6g+OA3hVIwkrupgOqK1esZ2uLopncZ822++THmtYH6RAoRBR6oyO7JE4B634DXgJJM khm0pAgdxkWozkNVF7vdQ12XSFBvLsC4FtxBkbotobayXuyhyINlYlBdJ0BUee6hrXgGVY6d9DCW QntOCWXVEYgwM4NWXG0v8xGKMl+DqpMKSlcGDaBx3caZj+8jEpQcLeoXlC0K2yBh5sExBKyg8s6h 3SBKhisRNRaaQWdbS5DjzWP4+Sh88d9ANVhBSWbOG8drPx8V/QfUb68mESYa8yAfghLcSxrT9nKN Np1mz1WmjM+gfl7ywLRTD5VkyDzhoZqvcqQp1CZbaAJRHOcE0nyVI8U5ZFDEgEKimGT/EfCG6Cgn 8x3QTGbYtkZ/2FyzfV7cs3U+Jy4s6hSUTjJoXNilUK7/KFSnu4Jqiy+D+tcphbZxn/c6tJ9MzCJQ Urda2MtQQt1MoX1eNTMdQvWOzTpgnHnlvgzFTIYzqBY2W5y0dJBWjCwX6KsHyR+QJWjPrZ69dAi1 1+BEp+RfBj0yYv4/NGoKlclZKL8z/VtQTiMGMjlzeolZfgnlC2NA3r0TUPKpo75SCsVAK8Zk5XvK vH0KO5SoanZQFZ8BShFc1abQGGe0Ul8+08/T8/kTfpnfHC2x73EAAAAASUVORK5CYII= "
-       preserveAspectRatio="none"
-       height="780.66797"
-       width="348.29807" />
-  </g>
-  <g
-     inkscape:label="Camada 1"
-     inkscape:groupmode="layer"
-     id="layer1"
-     transform="translate(0,-284.36217)" />
   <g
      inkscape:groupmode="layer"
      id="layer10"

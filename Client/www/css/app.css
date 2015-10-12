@@ -115,6 +115,10 @@ body{
     left: auto !important;
 }
 
+#avatarDiv {
+  display: block;
+  margin-bottom: 30px;
+}
 #avatarDiv button { 
   /* From "Dig Deep Into CSS Linear Gradients" (TUDOR, 2013)   
      http://hugogiraudel.com/2013/02/04/css-gradients/ */
@@ -130,7 +134,14 @@ body{
     #43a1cd linear-gradient(#ba3e2e, #ba3e2e) 50% 100%;
   background-repeat: no-repeat;
   background-size: 50% 50%;
-  color: white !important;                                        
+  color: white !important;
+  z-index: 2;                                        
+}
+#avatarDiv .avatar{
+  /*margin: 0 auto !important;*/
+  height: 320px;
+  width: auto;
+  z-index: 1;
 }
 
 .flex-footer {
