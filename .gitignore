@@ -1,17 +1,2 @@
-# Server Netbeans project and database configurations
-Server/nbproject/project.properties
-Server/nbproject/project.xml
-Server/nbproject/private/config.properties
-Server/nbproject/private/private.properties
-Server/nbproject/private/private.xml
-Server/edu/ifrs/canoas/pedal2play/resources/dbconfig.ini
-Server/log.txt
-
 # Astah temp file
 Especificação/Modelo/Modelagem-TCC.asta.lock
-
-# PhoneGap files and directories
-Client/platforms/**
-!Client/platforms/android/AndroidManifest.xml
-Client/plugins/**
-Client/hooks/**
