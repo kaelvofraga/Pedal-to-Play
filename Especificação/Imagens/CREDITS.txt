@@ -1,6 +1,7 @@
-Os avatares forma desenhados baseados nas artes de Tayoko e Mandi Paugh. 
+The avatars were designed based on arts by Tayoko[1], Mandi Paugh[2], Elythe[3] and OrangeNuke[4].
 
-Fonte: 
-Anime-style male base sprite: http://opengameart.org/content/anime-style-male-base-sprite
-Anime-style female base sprite: http://opengameart.org/content/anime-style-female-base-sprite
-Commissioned by OpenGameArt.org (http://opengameart.org)
+Sources: 
+1. Anime-style male base sprite: http://opengameart.org/content/anime-style-male-base-sprite
+2. Anime-style female base sprite: http://opengameart.org/content/anime-style-female-base-sprite
+3. Various Female Anime+Manga Hairstyles: http://www.deviantart.com/art/Various-Female-Anime-Manga-Hairstyles-307583395
+4. 50 Anime-Male Hairstyles II: http://orangenuke.deviantart.com/art/50-Anime-Male-Hairstyles-II-153814506
