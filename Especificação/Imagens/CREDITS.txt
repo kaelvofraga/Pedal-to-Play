@@ -1,6 +1,8 @@
 The avatars were designed based on arts by 
 Tayoko[1], Mandi Paugh[2], Elythe[3], OrangeNuke[4], dlite-yamamoto[5] and Pencil-Fluke[6,7,8].
 
+Bicycle designs are inspired by the models available in the Century Cycles website [9].
+
 References: 
 1. Anime-style male base sprite: http://opengameart.org/content/anime-style-male-base-sprite
 2. Anime-style female base sprite: http://opengameart.org/content/anime-style-female-base-sprite
@@ -10,3 +12,4 @@ References:
 6. 60 Mouths: http://pencil-fluke.deviantart.com/art/60-Mouths-164719230
 7. 60 Eyes: http://pencil-fluke.deviantart.com/art/60-Eyes-164566474
 8. 60 Eyebrows: http://pencil-fluke.deviantart.com/art/60-Eyebrows-164630074
+9. Century Cycles: http://centurycycles.com/catalog/bicycling-catalog-1/
