@@ -2,7 +2,7 @@
 <MER>
 	<Informacoes>
 		<Posicao Left="0" Top="0"/>
-		<TotalItens Valor="84"/>
+		<TotalItens Valor="85"/>
 		<Tipo Valor="LÓGICO"/>
 		<Versao Valor="2.0.0"/>
 		<Autor Valor=""/>
@@ -334,7 +334,7 @@
       <Left Valor="597"/>
       <Top Valor="231"/>
       <Width Valor="134"/>
-      <Height Valor="82"/>
+      <Height Valor="100"/>
       <Fonte default="-1"/>
       <Dicionario></Dicionario>
       <Nula Valor="0"/>
@@ -402,6 +402,27 @@
           <IsKey Valor="0"/>
           <IsFKey Valor="0"/>
           <Tipo Valor="char"/>
+          <TabOrigem Valor="0"/>
+          <CampoOrigem Valor="0"/>
+          <Complemento Valor=""/>
+          <OnUpdate Valor="0"/>
+          <OnDelete Valor="0"/>
+        </Campo>
+        <Campo nome="skin_color" id="275">
+          <Left Valor="597"/>
+          <Top Valor="304"/>
+          <Width Valor="132"/>
+          <Height Valor="19"/>
+          <Fonte default="-1"/>
+          <Dicionario></Dicionario>
+          <Nula Valor="-1"/>
+          <Observacao></Observacao>
+          <Futuro></Futuro>
+          <Anexos/>
+          <ApenasSeparador Valor="0"/>
+          <IsKey Valor="0"/>
+          <IsFKey Valor="0"/>
+          <Tipo Valor="long"/>
           <TabOrigem Valor="0"/>
           <CampoOrigem Valor="0"/>
           <Complemento Valor=""/>
@@ -918,7 +939,7 @@
           <Cardinalidades Cardinalidade="1">
             <Cardinalidade nome="" id="44">
               <Left Valor="559"/>
-              <Top Valor="257"/>
+              <Top Valor="249"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
               <Fonte default="-1"/>
@@ -1185,8 +1206,8 @@
           <MostraCardinalidade Valor="-1" Card_id="59"/>
           <Cardinalidades Cardinalidade="1">
             <Cardinalidade nome="" id="59">
-              <Left Valor="664"/>
-              <Top Valor="314"/>
+              <Left Valor="559"/>
+              <Top Valor="282"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
               <Fonte default="-1"/>
