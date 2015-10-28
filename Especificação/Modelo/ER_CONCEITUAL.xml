@@ -614,7 +614,7 @@
           <MinCard Valor="1"/>
           <Composto Valor="0"/>
           <Identificador Valor="0"/>
-          <Tipo Valor="long"/>
+          <Tipo Valor="varchar(10)"/>
           <Multivalorado Valor="0"/>
           <Orientacao Valor="3"/>
           <TamAuto Valor="-1"/>
@@ -1401,7 +1401,7 @@
           <MinCard Valor="0"/>
           <Composto Valor="0"/>
           <Identificador Valor="0"/>
-          <Tipo Valor="long"/>
+          <Tipo Valor="varchar(10)"/>
           <Multivalorado Valor="0"/>
           <Orientacao Valor="3"/>
           <TamAuto Valor="-1"/>
