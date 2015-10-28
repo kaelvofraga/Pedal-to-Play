@@ -2,7 +2,7 @@
 <MER>
 	<Informacoes>
 		<Posicao Left="0" Top="0"/>
-		<TotalItens Valor="85"/>
+		<TotalItens Valor="89"/>
 		<Tipo Valor="LÓGICO"/>
 		<Versao Valor="2.0.0"/>
 		<Autor Valor=""/>
@@ -31,7 +31,7 @@
       <Left Valor="566"/>
       <Top Valor="512"/>
       <Width Valor="147"/>
-      <Height Valor="82"/>
+      <Height Valor="100"/>
       <Fonte default="-1"/>
       <Dicionario></Dicionario>
       <Nula Valor="0"/>
@@ -80,6 +80,48 @@
           <Tipo Valor="long"/>
           <TabOrigem Valor="7"/>
           <CampoOrigem Valor="32"/>
+          <Complemento Valor=""/>
+          <OnUpdate Valor="0"/>
+          <OnDelete Valor="0"/>
+        </Campo>
+        <Campo nome="descricao" id="324">
+          <Left Valor="566"/>
+          <Top Valor="567"/>
+          <Width Valor="145"/>
+          <Height Valor="19"/>
+          <Fonte default="-1"/>
+          <Dicionario></Dicionario>
+          <Nula Valor="-1"/>
+          <Observacao></Observacao>
+          <Futuro></Futuro>
+          <Anexos/>
+          <ApenasSeparador Valor="0"/>
+          <IsKey Valor="0"/>
+          <IsFKey Valor="0"/>
+          <Tipo Valor="varchar(30)"/>
+          <TabOrigem Valor="0"/>
+          <CampoOrigem Valor="0"/>
+          <Complemento Valor=""/>
+          <OnUpdate Valor="0"/>
+          <OnDelete Valor="0"/>
+        </Campo>
+        <Campo nome="referencia" id="392">
+          <Left Valor="566"/>
+          <Top Valor="585"/>
+          <Width Valor="145"/>
+          <Height Valor="19"/>
+          <Fonte default="-1"/>
+          <Dicionario></Dicionario>
+          <Nula Valor="-1"/>
+          <Observacao></Observacao>
+          <Futuro></Futuro>
+          <Anexos/>
+          <ApenasSeparador Valor="0"/>
+          <IsKey Valor="0"/>
+          <IsFKey Valor="0"/>
+          <Tipo Valor="long"/>
+          <TabOrigem Valor="0"/>
+          <CampoOrigem Valor="0"/>
           <Complemento Valor=""/>
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
@@ -275,7 +317,7 @@
       <Left Valor="235"/>
       <Top Valor="494"/>
       <Width Valor="150"/>
-      <Height Valor="71"/>
+      <Height Valor="82"/>
       <Fonte default="-1"/>
       <Dicionario></Dicionario>
       <Nula Valor="0"/>
@@ -324,6 +366,27 @@
           <Tipo Valor="long"/>
           <TabOrigem Valor="1"/>
           <CampoOrigem Valor="8"/>
+          <Complemento Valor=""/>
+          <OnUpdate Valor="0"/>
+          <OnDelete Valor="0"/>
+        </Campo>
+        <Campo nome="level_necessario" id="326">
+          <Left Valor="235"/>
+          <Top Valor="549"/>
+          <Width Valor="148"/>
+          <Height Valor="19"/>
+          <Fonte default="-1"/>
+          <Dicionario></Dicionario>
+          <Nula Valor="-1"/>
+          <Observacao></Observacao>
+          <Futuro></Futuro>
+          <Anexos/>
+          <ApenasSeparador Valor="0"/>
+          <IsKey Valor="0"/>
+          <IsFKey Valor="0"/>
+          <Tipo Valor="int"/>
+          <TabOrigem Valor="0"/>
+          <CampoOrigem Valor="0"/>
           <Complemento Valor=""/>
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
@@ -533,10 +596,10 @@
       </Campos>
     </Tabela>
     <Tabela nome="Tipo_Imagem" id="7">
-      <Left Valor="778"/>
-      <Top Valor="525"/>
+      <Left Valor="804"/>
+      <Top Valor="510"/>
       <Width Valor="146"/>
-      <Height Valor="51"/>
+      <Height Valor="64"/>
       <Fonte default="-1"/>
       <Dicionario></Dicionario>
       <Nula Valor="0"/>
@@ -548,8 +611,8 @@
       <cOrdem Valor="0"/>
       <Campos>
         <Campo nome="id_tipoimagem" id="32">
-          <Left Valor="778"/>
-          <Top Valor="544"/>
+          <Left Valor="804"/>
+          <Top Valor="529"/>
           <Width Valor="144"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
@@ -562,6 +625,27 @@
           <IsKey Valor="-1"/>
           <IsFKey Valor="0"/>
           <Tipo Valor="long"/>
+          <TabOrigem Valor="0"/>
+          <CampoOrigem Valor="0"/>
+          <Complemento Valor=""/>
+          <OnUpdate Valor="0"/>
+          <OnDelete Valor="0"/>
+        </Campo>
+        <Campo nome="descricao" id="325">
+          <Left Valor="804"/>
+          <Top Valor="547"/>
+          <Width Valor="144"/>
+          <Height Valor="19"/>
+          <Fonte default="-1"/>
+          <Dicionario></Dicionario>
+          <Nula Valor="-1"/>
+          <Observacao></Observacao>
+          <Futuro></Futuro>
+          <Anexos/>
+          <ApenasSeparador Valor="0"/>
+          <IsKey Valor="0"/>
+          <IsFKey Valor="0"/>
+          <Tipo Valor="varchar(30)"/>
           <TabOrigem Valor="0"/>
           <CampoOrigem Valor="0"/>
           <Complemento Valor=""/>
@@ -1006,7 +1090,7 @@
           <Cardinalidades Cardinalidade="1">
             <Cardinalidade nome="" id="48">
               <Left Valor="528"/>
-              <Top Valor="538"/>
+              <Top Valor="547"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
               <Fonte default="-1"/>
@@ -1032,7 +1116,7 @@
           <Cardinalidades Cardinalidade="2">
             <Cardinalidade nome="" id="49">
               <Left Valor="385"/>
-              <Top Valor="514"/>
+              <Top Valor="520"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
               <Fonte default="-1"/>
@@ -1072,8 +1156,8 @@
           <MostraCardinalidade Valor="-1" Card_id="52"/>
           <Cardinalidades Cardinalidade="1">
             <Cardinalidade nome="" id="52">
-              <Left Valor="740"/>
-              <Top Valor="535"/>
+              <Left Valor="766"/>
+              <Top Valor="527"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
               <Fonte default="-1"/>
@@ -1099,7 +1183,7 @@
           <Cardinalidades Cardinalidade="4">
             <Cardinalidade nome="" id="53">
               <Left Valor="713"/>
-              <Top Valor="538"/>
+              <Top Valor="547"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
               <Fonte default="-1"/>
@@ -1434,7 +1518,7 @@
           <Cardinalidades Cardinalidade="1">
             <Cardinalidade nome="" id="208">
               <Left Valor="197"/>
-              <Top Valor="514"/>
+              <Top Valor="520"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
               <Fonte default="-1"/>
