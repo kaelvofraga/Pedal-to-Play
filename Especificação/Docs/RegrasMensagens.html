@@ -61,14 +61,35 @@
 			<p>1.05 = Não deve-se habilitar o registro de um email já registrado. 
 					  Caso contrário exibi-se a MSG 1.05.</p>
             <p>1.06 = Ao registrar um novo usuário deve ser salva a data de inscrição deste.</p>
-            <h2>Módulo Avatar</h2>
-            <p>2.01 = O avatar é composto por dois elementos: o ciclista e a bicicleta.</p>
-            <p>2.02 = O ciclista é dividido em 3 partes interligadas: cabelo, rosto (olhos, boca e nariz) e equipamentos.</p>
-            <p>2.03 = Os equipamentos incluem: capacete, trage, calçados e proteções (luva, joelheira e cotoveleira, óculos).</p>
-            <p>2.04 = Cada parte do ciclista tem 3 a 5 variações disponíveis e para cada variação pode-se escolher uma cor.</p>
-            <p>2.05 = Cada desafio cumprido deve presentear o usuário com alguma recompensa.</p>
-            <p>2.06 = Cada nível torna disponível ao usuário um novo modelo de bicicleta e uma parte da vestimenta profissional.</p>
-            <p>2.07 = Os modelos, ordenados por nível, são os seguintes:</p> 
+            <h2>Módulo Monitoramento de Pedalada</h2>
+			<p>2.01 = Os dados da pedalada são organizados em um arranjo de objetos do tipo Position <br>
+			(retorno do plugin Geolocation do Cordova ao obter a localização do usuário com sucesso), <br>
+			esse objeto deve conter os seguintes atributos com os devidos tipos listados abaixo:
+			<ol>
+			 <li>coords: arranjo de coordenadas. (Coordinates) 
+				 <ul>
+					<li>latitude: Latitude em graus decimais. (Number)</li>
+					<li>longitude: Longitude em graus decimais. (Number)</li>
+					<li>altitude: Altura da posição em metros. (Number)</li>
+					<li>accuracy: Nível de precisão da latitude e longitude em metros. (Number)</li>
+					<li>altitudeAccuracy: Nível de precisão da altitude em metros. (Number)</li>
+					<li>heading: Direcção da viagem, especificado em graus contando no sentido horário em relação ao norte verdadeiro. (Number)</li>
+					<li>speed: A velocidade atual do aparelho em relação ao chão, especificado em metros por segundo. (Number)</li>
+				 </ul>
+			 </li>
+			 <li>timestamp: timestamp do sistema. (DOMTimeStamp)</li>
+			</ol>
+			</p>
+			<p>2.02 = Caso os dados a serem salvos da pedalada não atendam a regra RNG 2.01, exibi-se a MSG 2.01.</p>
+			<p>2.03 = Caso o GPS não esteja ativo, exibi-se a MSG 2.02</p>
+			<h2>Módulo Avatar</h2>
+            <p>3.01 = O avatar é composto por dois elementos: o ciclista e a bicicleta.</p>
+            <p>3.02 = O ciclista é dividido em 3 partes interligadas: cabelo, rosto (olhos, boca e nariz) e equipamentos.</p>
+            <p>3.03 = Os equipamentos incluem: capacete, trage, calçados e proteções (luva, joelheira e cotoveleira, óculos).</p>
+            <p>3.04 = Cada parte do ciclista tem 3 a 5 variações disponíveis e para cada variação pode-se escolher uma cor.</p>
+            <p>3.05 = Cada desafio cumprido deve presentear o usuário com alguma recompensa.</p>
+            <p>3.06 = Cada nível torna disponível ao usuário um novo modelo de bicicleta e uma parte da vestimenta profissional.</p>
+            <p>3.07 = Os modelos, ordenados por nível, são os seguintes:</p> 
             <ol>
                 <li>Cruiser</li>
                 <li>BMX</li>
@@ -76,7 +97,7 @@
                 <li>Road</li>
                 <li>Triathlon</li>
 			</ol>
-			<p>2.08 = As vestimentas, ordenados por nível, são os seguintes:</p> 
+			<p>3.08 = As vestimentas, ordenados por nível, são os seguintes:</p> 
             <ol>
                 <li>Cabacete</li>
                 <li>Luvas</li>
@@ -84,12 +105,12 @@
                 <li>Óculos</li>
                 <li>Traje</li>
 			</ol>
-            <p>2.09 = Quando uma customização do avatar for salva mas não haver conexão com o servidor, 
+            <p>3.09 = Quando uma customização do avatar for salva mas não haver conexão com o servidor, 
                esta pendência deve ser adicionada a uma fila no armazenamento local para ser salva posteriormente.</p>
-			<p>2.10 = Quando o usuário deseja trocar o gênero do avatar, o sistema exbibe a mensagem de confirmação MSG 2.01.</p>
-			<p>2.11 = Quando ocorre uma falha no salvamento do avatar, no servidor, o sistema exibe a mensagem MSG 2.02.</p>
-			<p>2.12 = Quando ocorre uma falha ao recuperar as customizações salvas do avatar, no servidor, o sistema exibe a mensagem MSG 2.03.</p>
-            <p>2.13 = Quando o dispositivo do usuário não suporta SVG inline, o sistema exibe a mensagem MSG 2.04.</p>
+			<p>3.10 = Quando o usuário deseja trocar o gênero do avatar, o sistema exbibe a mensagem de confirmação MSG 2.01.</p>
+			<p>3.11 = Quando ocorre uma falha no salvamento do avatar, no servidor, o sistema exibe a mensagem MSG 2.02.</p>
+			<p>3.12 = Quando ocorre uma falha ao recuperar as customizações salvas do avatar, no servidor, o sistema exibe a mensagem MSG 2.03.</p>
+            <p>3.13 = Quando o dispositivo do usuário não suporta SVG inline, o sistema exibe a mensagem MSG 2.04.</p>
 			<br>
         </div>
         
@@ -103,10 +124,13 @@
 			<p>1.04 = [Erro] Este campo deve ser preenchido.</p>
 			<p>1.05 = [Erro] Este email já está sendo utilizado.</p>
             <br>
-			<p>2.01 = [Pergunta] Deseja trocar o gênero de seu avatar?</p>
-			<p>2.02 = [Erro] Customizações de avatar inválidas. Confira suas escolhas.</p>
-			<p>2.03 = [Erro] A customização de seu avatar não pode ser recuperada.</p>
-			<p>2.04 = [Erro] Desculpe-me, mas seu dispositivo não suporta o sistema de customização do avatar.</p>
+			<p>2.01 = [Erro] Não foi possível salvar a pedalada, os dados estão corrompidos. </p>
+			<p>2.02 = [Alerta] Para gravar, por favor, ligue o GPS de seu dispositivo!</p>
+			<br>
+			<p>3.01 = [Pergunta] Deseja trocar o gênero de seu avatar?</p>
+			<p>3.02 = [Erro] Customizações de avatar inválidas. Confira suas escolhas.</p>
+			<p>3.03 = [Erro] A customização de seu avatar não pode ser recuperada.</p>
+			<p>3.04 = [Erro] Desculpe-me, mas seu dispositivo não suporta o sistema de customização do avatar.</p>
 			<br>
         </div>
     </body>
