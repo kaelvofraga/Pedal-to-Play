@@ -2,7 +2,7 @@
 <MER>
 	<Informacoes>
 		<Posicao Left="0" Top="0"/>
-		<TotalItens Valor="78"/>
+		<TotalItens Valor="79"/>
 		<Tipo Valor="LÓGICO"/>
 		<Versao Valor="2.0.0"/>
 		<Autor Valor=""/>
@@ -720,7 +720,7 @@
       <Left Valor="257"/>
       <Top Valor="296"/>
       <Width Valor="182"/>
-      <Height Valor="101"/>
+      <Height Valor="118"/>
       <Fonte default="-1"/>
       <Dicionario></Dicionario>
       <Nula Valor="0"/>
@@ -809,6 +809,27 @@
           <IsKey Valor="0"/>
           <IsFKey Valor="0"/>
           <Tipo Valor="varchar(101)"/>
+          <TabOrigem Valor="0"/>
+          <CampoOrigem Valor="0"/>
+          <Complemento Valor=""/>
+          <OnUpdate Valor="0"/>
+          <OnDelete Valor="0"/>
+        </Campo>
+        <Campo nome="cronometro" id="505">
+          <Left Valor="257"/>
+          <Top Valor="387"/>
+          <Width Valor="180"/>
+          <Height Valor="19"/>
+          <Fonte default="-1"/>
+          <Dicionario></Dicionario>
+          <Nula Valor="-1"/>
+          <Observacao></Observacao>
+          <Futuro></Futuro>
+          <Anexos/>
+          <ApenasSeparador Valor="0"/>
+          <IsKey Valor="0"/>
+          <IsFKey Valor="0"/>
+          <Tipo Valor="int(15)"/>
           <TabOrigem Valor="0"/>
           <CampoOrigem Valor="0"/>
           <Complemento Valor=""/>
@@ -1382,7 +1403,7 @@
           <Cardinalidades Cardinalidade="1">
             <Cardinalidade nome="" id="450">
               <Left Valor="219"/>
-              <Top Valor="331"/>
+              <Top Valor="340"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
               <Fonte default="-1"/>
