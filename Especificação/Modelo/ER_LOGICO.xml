@@ -1,15 +1,56 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <MER>
 	<Informacoes>
-		<Posicao Left="165" Top="0"/>
-		<TotalItens Valor="68"/>
+		<Posicao Left="0" Top="0"/>
+		<TotalItens Valor="78"/>
 		<Tipo Valor="LÓGICO"/>
 		<Versao Valor="2.0.0"/>
 		<Autor Valor=""/>
 		<Observacao Valor=""/>
 		<Template>
       <CAMPOS/>
-      <TIPOS/>
+      <TIPOS>
+        <ITEM>
+          <Campo1>long</Campo1>
+          <Campo2>INT (11)</Campo2>
+        </ITEM>
+        <ITEM>
+          <Campo1>varchar(30)</Campo1>
+          <Campo2>VARCHAR (30)</Campo2>
+        </ITEM>
+        <ITEM>
+          <Campo1>int</Campo1>
+          <Campo2>INT</Campo2>
+        </ITEM>
+        <ITEM>
+          <Campo1>timestamp</Campo1>
+          <Campo2>TIMESTAMP</Campo2>
+        </ITEM>
+        <ITEM>
+          <Campo1>varchar(100)</Campo1>
+          <Campo2>VARCHAR (100)</Campo2>
+        </ITEM>
+        <ITEM>
+          <Campo1>float</Campo1>
+          <Campo2>INT (11)</Campo2>
+        </ITEM>
+        <ITEM>
+          <Campo1>varchar(150)</Campo1>
+          <Campo2>VARCHAR (150)</Campo2>
+        </ITEM>
+        <ITEM>
+          <Campo1>date</Campo1>
+          <Campo2>DATE</Campo2>
+        </ITEM>
+        <ITEM>
+          <Campo1>char</Campo1>
+          <Campo2>CHAR</Campo2>
+        </ITEM>
+        <ITEM>
+          <Campo1>varchar(10)</Campo1>
+          <Campo2>VARCHAR (10)</Campo2>
+        </ITEM>
+      </TIPOS>
       <COMPLEMENTO_CAMPOS/>
       <COMPLEMENTO_TABELAS/>
       <DDL>
@@ -646,8 +687,8 @@
           <IsKey Valor="0"/>
           <IsFKey Valor="-1"/>
           <Tipo Valor="long"/>
-          <TabOrigem Valor="0"/>
-          <CampoOrigem Valor="0"/>
+          <TabOrigem Valor="4"/>
+          <CampoOrigem Valor="22"/>
           <Complemento Valor=""/>
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
@@ -677,9 +718,9 @@
     </Tabela>
     <Tabela nome="AtividadeLog" id="6">
       <Left Valor="257"/>
-      <Top Valor="297"/>
-      <Width Valor="161"/>
-      <Height Valor="136"/>
+      <Top Valor="296"/>
+      <Width Valor="182"/>
+      <Height Valor="101"/>
       <Fonte default="-1"/>
       <Dicionario></Dicionario>
       <Nula Valor="0"/>
@@ -690,73 +731,10 @@
       <Complemento Valor=""/>
       <cOrdem Valor="0"/>
       <Campos>
-        <Campo nome="calorias" id="27">
-          <Left Valor="257"/>
-          <Top Valor="316"/>
-          <Width Valor="159"/>
-          <Height Valor="19"/>
-          <Fonte default="-1"/>
-          <Dicionario></Dicionario>
-          <Nula Valor="-1"/>
-          <Observacao></Observacao>
-          <Futuro></Futuro>
-          <Anexos/>
-          <ApenasSeparador Valor="0"/>
-          <IsKey Valor="0"/>
-          <IsFKey Valor="0"/>
-          <Tipo Valor="float"/>
-          <TabOrigem Valor="0"/>
-          <CampoOrigem Valor="0"/>
-          <Complemento Valor=""/>
-          <OnUpdate Valor="0"/>
-          <OnDelete Valor="0"/>
-        </Campo>
-        <Campo nome="data_inicio" id="28">
-          <Left Valor="257"/>
-          <Top Valor="334"/>
-          <Width Valor="159"/>
-          <Height Valor="19"/>
-          <Fonte default="-1"/>
-          <Dicionario></Dicionario>
-          <Nula Valor="-1"/>
-          <Observacao></Observacao>
-          <Futuro></Futuro>
-          <Anexos/>
-          <ApenasSeparador Valor="0"/>
-          <IsKey Valor="0"/>
-          <IsFKey Valor="0"/>
-          <Tipo Valor="timestamp"/>
-          <TabOrigem Valor="0"/>
-          <CampoOrigem Valor="0"/>
-          <Complemento Valor=""/>
-          <OnUpdate Valor="0"/>
-          <OnDelete Valor="0"/>
-        </Campo>
-        <Campo nome="distancia" id="29">
-          <Left Valor="257"/>
-          <Top Valor="352"/>
-          <Width Valor="159"/>
-          <Height Valor="19"/>
-          <Fonte default="-1"/>
-          <Dicionario></Dicionario>
-          <Nula Valor="-1"/>
-          <Observacao></Observacao>
-          <Futuro></Futuro>
-          <Anexos/>
-          <ApenasSeparador Valor="0"/>
-          <IsKey Valor="0"/>
-          <IsFKey Valor="0"/>
-          <Tipo Valor="float"/>
-          <TabOrigem Valor="0"/>
-          <CampoOrigem Valor="0"/>
-          <Complemento Valor=""/>
-          <OnUpdate Valor="0"/>
-          <OnDelete Valor="0"/>
-        </Campo>
         <Campo nome="id_atividadelog" id="30">
           <Left Valor="257"/>
-          <Top Valor="370"/>
-          <Width Valor="159"/>
+          <Top Valor="315"/>
+          <Width Valor="180"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -774,10 +752,132 @@
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
         </Campo>
-        <Campo nome="data_fim" id="31">
+        <Campo nome="id_usuario" id="38">
           <Left Valor="257"/>
-          <Top Valor="388"/>
-          <Width Valor="159"/>
+          <Top Valor="333"/>
+          <Width Valor="180"/>
+          <Height Valor="19"/>
+          <Fonte default="-1"/>
+          <Dicionario></Dicionario>
+          <Nula Valor="-1"/>
+          <Observacao></Observacao>
+          <Futuro></Futuro>
+          <Anexos/>
+          <ApenasSeparador Valor="0"/>
+          <IsKey Valor="0"/>
+          <IsFKey Valor="-1"/>
+          <Tipo Valor="long"/>
+          <TabOrigem Valor="2"/>
+          <CampoOrigem Valor="15"/>
+          <Complemento Valor=""/>
+          <OnUpdate Valor="0"/>
+          <OnDelete Valor="0"/>
+        </Campo>
+        <Campo nome="calorias" id="27">
+          <Left Valor="257"/>
+          <Top Valor="351"/>
+          <Width Valor="180"/>
+          <Height Valor="19"/>
+          <Fonte default="-1"/>
+          <Dicionario></Dicionario>
+          <Nula Valor="-1"/>
+          <Observacao></Observacao>
+          <Futuro></Futuro>
+          <Anexos/>
+          <ApenasSeparador Valor="0"/>
+          <IsKey Valor="0"/>
+          <IsFKey Valor="0"/>
+          <Tipo Valor="float"/>
+          <TabOrigem Valor="0"/>
+          <CampoOrigem Valor="0"/>
+          <Complemento Valor=""/>
+          <OnUpdate Valor="0"/>
+          <OnDelete Valor="0"/>
+        </Campo>
+        <Campo nome="descricao" id="476">
+          <Left Valor="257"/>
+          <Top Valor="369"/>
+          <Width Valor="180"/>
+          <Height Valor="19"/>
+          <Fonte default="-1"/>
+          <Dicionario></Dicionario>
+          <Nula Valor="-1"/>
+          <Observacao></Observacao>
+          <Futuro></Futuro>
+          <Anexos/>
+          <ApenasSeparador Valor="0"/>
+          <IsKey Valor="0"/>
+          <IsFKey Valor="0"/>
+          <Tipo Valor="varchar(101)"/>
+          <TabOrigem Valor="0"/>
+          <CampoOrigem Valor="0"/>
+          <Complemento Valor=""/>
+          <OnUpdate Valor="0"/>
+          <OnDelete Valor="0"/>
+        </Campo>
+      </Campos>
+    </Tabela>
+    <Tabela nome="Posicao" id="445">
+      <Left Valor="78"/>
+      <Top Valor="373"/>
+      <Width Valor="156"/>
+      <Height Valor="136"/>
+      <Fonte default="-1"/>
+      <Dicionario></Dicionario>
+      <Nula Valor="0"/>
+      <Observacao></Observacao>
+      <Futuro></Futuro>
+      <Anexos/>
+      <Color Valor="12639424"/>
+      <Complemento Valor=""/>
+      <cOrdem Valor="0"/>
+      <Campos>
+        <Campo nome="id_posicao" id="447">
+          <Left Valor="78"/>
+          <Top Valor="392"/>
+          <Width Valor="154"/>
+          <Height Valor="19"/>
+          <Fonte default="-1"/>
+          <Dicionario></Dicionario>
+          <Nula Valor="-1"/>
+          <Observacao></Observacao>
+          <Futuro></Futuro>
+          <Anexos/>
+          <ApenasSeparador Valor="0"/>
+          <IsKey Valor="-1"/>
+          <IsFKey Valor="0"/>
+          <Tipo Valor="long"/>
+          <TabOrigem Valor="0"/>
+          <CampoOrigem Valor="0"/>
+          <Complemento Valor=""/>
+          <OnUpdate Valor="0"/>
+          <OnDelete Valor="0"/>
+        </Campo>
+        <Campo nome="id_atividadelog" id="448">
+          <Left Valor="78"/>
+          <Top Valor="410"/>
+          <Width Valor="154"/>
+          <Height Valor="19"/>
+          <Fonte default="-1"/>
+          <Dicionario></Dicionario>
+          <Nula Valor="-1"/>
+          <Observacao></Observacao>
+          <Futuro></Futuro>
+          <Anexos/>
+          <ApenasSeparador Valor="0"/>
+          <IsKey Valor="0"/>
+          <IsFKey Valor="-1"/>
+          <Tipo Valor="long"/>
+          <TabOrigem Valor="445"/>
+          <CampoOrigem Valor="447"/>
+          <Complemento Valor=""/>
+          <OnUpdate Valor="0"/>
+          <OnDelete Valor="0"/>
+        </Campo>
+        <Campo nome="data_hora" id="446">
+          <Left Valor="78"/>
+          <Top Valor="428"/>
+          <Width Valor="154"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -795,10 +895,10 @@
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
         </Campo>
-        <Campo nome="id_usuario" id="38">
-          <Left Valor="257"/>
-          <Top Valor="406"/>
-          <Width Valor="159"/>
+        <Campo nome="latitude" id="452">
+          <Left Valor="78"/>
+          <Top Valor="446"/>
+          <Width Valor="154"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -808,10 +908,52 @@
           <Anexos/>
           <ApenasSeparador Valor="0"/>
           <IsKey Valor="0"/>
-          <IsFKey Valor="-1"/>
-          <Tipo Valor="long"/>
-          <TabOrigem Valor="2"/>
-          <CampoOrigem Valor="15"/>
+          <IsFKey Valor="0"/>
+          <Tipo Valor="int"/>
+          <TabOrigem Valor="0"/>
+          <CampoOrigem Valor="0"/>
+          <Complemento Valor=""/>
+          <OnUpdate Valor="0"/>
+          <OnDelete Valor="0"/>
+        </Campo>
+        <Campo nome="longitude" id="453">
+          <Left Valor="78"/>
+          <Top Valor="464"/>
+          <Width Valor="154"/>
+          <Height Valor="19"/>
+          <Fonte default="-1"/>
+          <Dicionario></Dicionario>
+          <Nula Valor="-1"/>
+          <Observacao></Observacao>
+          <Futuro></Futuro>
+          <Anexos/>
+          <ApenasSeparador Valor="0"/>
+          <IsKey Valor="0"/>
+          <IsFKey Valor="0"/>
+          <Tipo Valor="int"/>
+          <TabOrigem Valor="0"/>
+          <CampoOrigem Valor="0"/>
+          <Complemento Valor=""/>
+          <OnUpdate Valor="0"/>
+          <OnDelete Valor="0"/>
+        </Campo>
+        <Campo nome="velocidade" id="454">
+          <Left Valor="78"/>
+          <Top Valor="482"/>
+          <Width Valor="154"/>
+          <Height Valor="19"/>
+          <Fonte default="-1"/>
+          <Dicionario></Dicionario>
+          <Nula Valor="-1"/>
+          <Observacao></Observacao>
+          <Futuro></Futuro>
+          <Anexos/>
+          <ApenasSeparador Valor="0"/>
+          <IsKey Valor="0"/>
+          <IsFKey Valor="0"/>
+          <Tipo Valor="int"/>
+          <TabOrigem Valor="0"/>
+          <CampoOrigem Valor="0"/>
           <Complemento Valor=""/>
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
@@ -1062,7 +1204,7 @@
         </Ligacao>
         <Ligacao Destino_ID="54">
           <MostraCardinalidade Valor="-1" Card_id="57"/>
-          <Cardinalidades Cardinalidade="3">
+          <Cardinalidades Cardinalidade="4">
             <Cardinalidade nome="" id="57">
               <Left Valor="536"/>
               <Top Valor="424"/>
@@ -1078,7 +1220,7 @@
               <TamAuto Valor="-1"/>
               <Tipo Valor="0"/>
               <TextAlin Valor="0"/>
-              <Card Valor="3"/>
+              <Card Valor="4"/>
               <Fixa Valor="0"/>
               <Ligacoes/>
             </Cardinalidade>
@@ -1129,7 +1271,7 @@
         </Ligacao>
         <Ligacao Destino_ID="54">
           <MostraCardinalidade Valor="-1" Card_id="60"/>
-          <Cardinalidades Cardinalidade="4">
+          <Cardinalidades Cardinalidade="3">
             <Cardinalidade nome="" id="60">
               <Left Valor="536"/>
               <Top Valor="326"/>
@@ -1145,7 +1287,7 @@
               <TamAuto Valor="-1"/>
               <Tipo Valor="0"/>
               <TextAlin Valor="0"/>
-              <Card Valor="4"/>
+              <Card Valor="3"/>
               <Fixa Valor="0"/>
               <Ligacoes/>
             </Cardinalidade>
@@ -1198,8 +1340,8 @@
           <MostraCardinalidade Valor="-1" Card_id="41"/>
           <Cardinalidades Cardinalidade="4">
             <Cardinalidade nome="" id="41">
-              <Left Valor="337"/>
-              <Top Valor="282"/>
+              <Left Valor="348"/>
+              <Top Valor="281"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
               <Fonte default="-1"/>
@@ -1213,6 +1355,73 @@
               <Tipo Valor="0"/>
               <TextAlin Valor="0"/>
               <Card Valor="4"/>
+              <Fixa Valor="0"/>
+              <Ligacoes/>
+            </Cardinalidade>
+          </Cardinalidades>
+          <Orientacao Valor="0"/>
+          <Fraca Valor="0"/>
+        </Ligacao>
+      </Ligacoes>
+    </LigaTabela>
+    <LigaTabela nome="AtividadeLog_Posicao_1" id="449">
+      <Left Valor="149"/>
+      <Top Valor="331"/>
+      <Width Valor="15"/>
+      <Height Valor="15"/>
+      <Fonte default="-1"/>
+      <Dicionario></Dicionario>
+      <Nula Valor="0"/>
+      <Observacao></Observacao>
+      <Futuro></Futuro>
+      <Anexos/>
+      <SetaDirecao Valor="0"/>
+      <Ligacoes>
+        <Ligacao Destino_ID="6">
+          <MostraCardinalidade Valor="-1" Card_id="450"/>
+          <Cardinalidades Cardinalidade="1">
+            <Cardinalidade nome="" id="450">
+              <Left Valor="219"/>
+              <Top Valor="331"/>
+              <Width Valor="40"/>
+              <Height Valor="20"/>
+              <Fonte default="-1"/>
+              <Dicionario></Dicionario>
+              <Nula Valor="0"/>
+              <Observacao></Observacao>
+              <Futuro></Futuro>
+              <Anexos/>
+              <Cor Valor="15780518"/>
+              <TamAuto Valor="-1"/>
+              <Tipo Valor="0"/>
+              <TextAlin Valor="0"/>
+              <Card Valor="1"/>
+              <Fixa Valor="0"/>
+              <Ligacoes/>
+            </Cardinalidade>
+          </Cardinalidades>
+          <Orientacao Valor="0"/>
+          <Fraca Valor="0"/>
+        </Ligacao>
+        <Ligacao Destino_ID="445">
+          <MostraCardinalidade Valor="-1" Card_id="451"/>
+          <Cardinalidades Cardinalidade="3">
+            <Cardinalidade nome="" id="451">
+              <Left Valor="156"/>
+              <Top Valor="358"/>
+              <Width Valor="40"/>
+              <Height Valor="20"/>
+              <Fonte default="-1"/>
+              <Dicionario></Dicionario>
+              <Nula Valor="0"/>
+              <Observacao></Observacao>
+              <Futuro></Futuro>
+              <Anexos/>
+              <Cor Valor="15780518"/>
+              <TamAuto Valor="-1"/>
+              <Tipo Valor="0"/>
+              <TextAlin Valor="0"/>
+              <Card Valor="3"/>
               <Fixa Valor="0"/>
               <Ligacoes/>
             </Cardinalidade>
