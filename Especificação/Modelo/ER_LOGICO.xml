@@ -376,10 +376,10 @@
       </Campos>
     </Tabela>
     <Tabela nome="Avatar" id="4">
-      <Left Valor="558"/>
-      <Top Valor="213"/>
-      <Width Valor="134"/>
-      <Height Valor="100"/>
+      <Left Valor="529"/>
+      <Top Valor="195"/>
+      <Width Valor="166"/>
+      <Height Valor="91"/>
       <Fonte default="-1"/>
       <Dicionario></Dicionario>
       <Nula Valor="0"/>
@@ -390,10 +390,10 @@
       <Complemento Valor=""/>
       <cOrdem Valor="0"/>
       <Campos>
-        <Campo nome="id_avatar" id="22">
-          <Left Valor="558"/>
-          <Top Valor="232"/>
-          <Width Valor="132"/>
+        <Campo nome="id_usuario" id="160">
+          <Left Valor="529"/>
+          <Top Valor="214"/>
+          <Width Valor="164"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -403,27 +403,6 @@
           <Anexos/>
           <ApenasSeparador Valor="0"/>
           <IsKey Valor="-1"/>
-          <IsFKey Valor="0"/>
-          <Tipo Valor="long"/>
-          <TabOrigem Valor="0"/>
-          <CampoOrigem Valor="0"/>
-          <Complemento Valor=""/>
-          <OnUpdate Valor="0"/>
-          <OnDelete Valor="0"/>
-        </Campo>
-        <Campo nome="id_usuario" id="160">
-          <Left Valor="558"/>
-          <Top Valor="250"/>
-          <Width Valor="132"/>
-          <Height Valor="19"/>
-          <Fonte default="-1"/>
-          <Dicionario></Dicionario>
-          <Nula Valor="-1"/>
-          <Observacao></Observacao>
-          <Futuro></Futuro>
-          <Anexos/>
-          <ApenasSeparador Valor="0"/>
-          <IsKey Valor="0"/>
           <IsFKey Valor="-1"/>
           <Tipo Valor="long"/>
           <TabOrigem Valor="2"/>
@@ -433,9 +412,9 @@
           <OnDelete Valor="0"/>
         </Campo>
         <Campo nome="genero" id="23">
-          <Left Valor="558"/>
-          <Top Valor="268"/>
-          <Width Valor="132"/>
+          <Left Valor="529"/>
+          <Top Valor="232"/>
+          <Width Valor="164"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -454,9 +433,9 @@
           <OnDelete Valor="0"/>
         </Campo>
         <Campo nome="skin_color" id="275">
-          <Left Valor="558"/>
-          <Top Valor="286"/>
-          <Width Valor="132"/>
+          <Left Valor="529"/>
+          <Top Valor="250"/>
+          <Width Valor="164"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -688,7 +667,7 @@
           <IsFKey Valor="-1"/>
           <Tipo Valor="long"/>
           <TabOrigem Valor="4"/>
-          <CampoOrigem Valor="22"/>
+          <CampoOrigem Valor="0"/>
           <Complemento Valor=""/>
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
@@ -863,7 +842,7 @@
       <Left Valor="78"/>
       <Top Valor="373"/>
       <Width Valor="156"/>
-      <Height Valor="136"/>
+      <Height Valor="154"/>
       <Fonte default="-1"/>
       <Dicionario></Dicionario>
       <Nula Valor="0"/>
@@ -1000,6 +979,27 @@
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
         </Campo>
+        <Campo nome="status" id="563">
+          <Left Valor="78"/>
+          <Top Valor="500"/>
+          <Width Valor="154"/>
+          <Height Valor="19"/>
+          <Fonte default="-1"/>
+          <Dicionario></Dicionario>
+          <Nula Valor="-1"/>
+          <Observacao></Observacao>
+          <Futuro></Futuro>
+          <Anexos/>
+          <ApenasSeparador Valor="0"/>
+          <IsKey Valor="0"/>
+          <IsFKey Valor="0"/>
+          <Tipo Valor="int"/>
+          <TabOrigem Valor="0"/>
+          <CampoOrigem Valor="0"/>
+          <Complemento Valor=""/>
+          <OnUpdate Valor="0"/>
+          <OnDelete Valor="0"/>
+        </Campo>
       </Campos>
     </Tabela>
   </Tabelas>
@@ -1088,8 +1088,8 @@
           <MostraCardinalidade Valor="-1" Card_id="44"/>
           <Cardinalidades Cardinalidade="1">
             <Cardinalidade nome="" id="44">
-              <Left Valor="520"/>
-              <Top Valor="231"/>
+              <Left Valor="491"/>
+              <Top Valor="210"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
               <Fonte default="-1"/>
@@ -1207,7 +1207,7 @@
     </LigaTabela>
     <LigaTabela nome="Imagem_composto por_1" id="55">
       <Left Valor="608"/>
-      <Top Valor="447"/>
+      <Top Valor="456"/>
       <Width Valor="15"/>
       <Height Valor="15"/>
       <Fonte default="-1"/>
@@ -1273,8 +1273,8 @@
       </Ligacoes>
     </LigaTabela>
     <LigaTabela nome="Avatar_composto por_1" id="58">
-      <Left Valor="500"/>
-      <Top Valor="272"/>
+      <Left Valor="465"/>
+      <Top Valor="248"/>
       <Width Valor="15"/>
       <Height Valor="15"/>
       <Fonte default="-1"/>
@@ -1289,8 +1289,8 @@
           <MostraCardinalidade Valor="-1" Card_id="59"/>
           <Cardinalidades Cardinalidade="1">
             <Cardinalidade nome="" id="59">
-              <Left Valor="520"/>
-              <Top Valor="264"/>
+              <Left Valor="491"/>
+              <Top Valor="240"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
               <Fonte default="-1"/>

@@ -1,0 +1,63 @@
+% Definicoes para o modelo ifrs.cls
+
+\usepackage[utf8]{inputenc}
+
+\@namedef{captionsbrazilian}{
+
+    % DEFINIÇÕES DO CURSO
+	\def\titlepagespecificinfo{
+		Proposta de Desenvolvimento de Trabalho de Conclusão de Curso apresentada como\\
+		requisito parcial para a obtenção do\\
+		grau de Tecnólogo em Análise e Desenvolvimento\\ 
+	    de Sistemas
+	}
+	\def\instituicao{Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Sul}
+	\def\campus{Câmpus Canoas}
+	\def\course{Curso Superior de Tecnologia em Análise e Desenvolvimento de Sistemas}
+	\def\@cipspecificinfo{Proposta de Desenvolvimento de Trabalho de Conclusão de Curso}
+	\def\@cipcourse{Curso Superior de Tecnologia em Análise e Desenvolvimento de Sistemas do IFRS}
+	% ou TADS/IFRS, PPGC da UFRGS,...
+    % ATÉ AQUI
+    
+	\def\bibname{Referências}%
+	\def\abstractname{Resumo}%
+	\def\appendixname{Apêndice}%
+	\def\contentsname{Sumário}%
+	\def\listfigurename{Lista de Figuras}%
+	\def\listtablename{Lista de Tabelas}%
+	\def\listdefname{Lista de Definições}%
+	\def\listtheoremsname{Lista de Teoremas}%
+	\def\corollaryname{Corolário}%
+	\def\propositionname{Proposição}%
+	\def\definitionname{Definição}%
+	\def\conjecturename{Conjectura}%
+	\def\examplename{Exemplo}%
+	\def\exercisename{Exercício}%
+	\def\propertyname{Property}%
+	\def\remarknamek{Observação}%
+	\def\lemmaname{Lema}%
+	\def\theoremname{Teorema}%
+	\def\proofname{Prova}%
+	\def\figurename{Figura}%
+	\def\tablename{Tabela}%
+	\def\advisorname{Orientador}%
+	\def\coadvisorname{Co-orientador}%
+	\def\listabbrvname{Lista de Abreviaturas e Siglas}%
+	\def\listsymbolname{Lista de Símbolos}%
+	\def\annexname{Anexo}%
+	\def\keywordsname{Palavras-chave}%
+	\def\cipcaption{CIP -- CATALOGAÇÃO NA PUBLICAÇÃO}%
+	\def\byname{por}%
+	\def\financname{Órgãos Financiadores}%
+	\def\coordname{Coordenador do Curso}%
+}
+\@namedef{datebrazilian}{%
+	\def\monthname{%
+		\ifcase\month\or%
+			janeiro\or fevereiro\or março\or abril\or%
+			maio\or junho\or julho\or agosto\or setembro\or%
+			outubro\or novembro\or dezembro%
+		\fi%
+	}%
+	\def\ii@date{\@publmonth\ de~\@publyear}%
+}

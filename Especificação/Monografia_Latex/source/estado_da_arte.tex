@@ -1,0 +1,54 @@
+%Arquivo contendo a sessão Estado da Arte
+\chapter{Estado da Arte} \label{cap:estadoarte}
+Nesta seção serão descritos alguns trabalhos relacionados com a temática e conceitos do Pedal-to-Play. Eles serão divididos em dois grupos: aplicativos comerciais e trabalhos científicos.
+
+\section{Aplicativos comerciais}
+Entre os aplicativos comerciais mais populares atualmente na categoria de Saúde e \textit{Fitness}, com a atividade de ciclismo como um dos focos, estão o Strava e o Runtastic Road Bike. Ambos utilizam funções do geolocalização para traçar rotas, guardar trajetos do usuário e calcular valores de velocidade, altitude e distância percorrida, com a intenção de gerar relatórios sobre o desempenho do usuário em corridas ou pedaladas. As Figuras \ref{fig:strava} e \ref{fig:Runtastic} são \textit{print screens}, respectivamente, dos aplicativos Strava e Runtastic Road Bike.\par 
+
+\begin{figure}[h]
+\centering
+\begin{minipage}{.5\textwidth}
+  \centering
+  \captionof{figure}{Rastreamento de pedalada\\do Strava.}
+  \includegraphics[width=.8\linewidth]{figuras/strava.png}
+  \label{fig:strava}
+  \newline
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+  \centering
+  \captionof{figure}{Histórico de atividades\\do Runtastic Road Bike.}
+  \includegraphics[width=.8\linewidth]{figuras/Runtastic.png}
+  \label{fig:Runtastic}
+  \newline
+\end{minipage}
+\centerline{Fonte: \textit{print screens} das aplicações Strava e Runtastic Road Bike, respectivamente.}
+\end{figure}
+
+O Strava, em particular, utiliza alguns conceitos de gamificação, tais como: sistema de desafios e recompensas (baseadas em prêmios, \textit{ranking} e \textit{badges}); criação de metas e socialização entre usuários. \par 
+
+Estes aplicativos também possibilitam integração com redes sociais e compartilhamento de dados entre os usuário. Assim como o interfaceamento com outros dispositivos eletrônicos para monitoramento de atividades, tal como o Garmin\footnote{\url{http://www.garmin.com/}} (Figura \ref{fig:garmin}). \par 
+
+\begin{figure}[h]
+    \caption{Computador compacto para bicicleta com GPS da Garmin.}
+    \centerline{\includegraphics[width=11em]{figuras/cf-lg.jpg}}
+    \label{fig:garmin}
+\end{figure}
+\centerline{Fonte: Página oficial do produto na Web\footnote{Disponível em:  <\url{https://buy.garmin.com/pt-BR/BR/cIntoSports-cCycling-p1.html}>. Acesso  em jun. 2015.}}
+
+\section{Trabalhos científicos}
+Entre os trabalhos científicos pesquisados estão as obras de Cesani e Dranka \citeyearpar{cesani2013} e Rosero \citeyearpar{gaidos2012}, ambos propuseram sistemas para auxiliar ciclistas em suas atividades. \par
+
+Cesani e Dranka propuseram diretrizes para o desenvolvimento de uma aplicação \textit{mobile} com a intenção de auxiliar os ciclistas de Curitiba em seus trajetos. Para isso, eles estudaram o sistema de navegação GPS; as ciclovias e vias alternativas de Curitiba; o perfil do ciclista desta cidade; documentos sobre a infraestrutura urbana cicloviária e produtos relacionados usados pelos ciclistas de Curitiba. Como resultados, os autores definiram a fundamentação teórica da pesquisa e uma base para o desenvolvimento da interface homem-computador para um futuro protótipo funcional. \par
+
+Rosero, em sua dissertação de mestrado, desenvolveu um protótipo para um sistema de treinamento e monitoramento para ciclistas (Figura \ref{fig:rosero}). Envolvendo a implementação de uma aplicação para plataforma Android e módulos de \textit{hardware} (tais como um módulo Bluetooth\footnote{Bluetooth é uma tecnologia de comunicação sem fio, baseada em ondas de rádio frequência de curto alcance. Possibilita comunicação eficiente e eficaz entre diferentes dispositivos eletrônicos \cite{gaidos2012}.}, sensores de frequência cardíaca, de percentual de oxigênio e de temperatura). Este sistema fornece informações dos sinais fisiológicos do usuário, processando e disponibilizando estas na rede social Twitter\footnote{\url{https://twitter.com}}, para que um treinador possa acompanhar os resultados.
+
+\begin{figure}[t]
+    \caption[Protótipo de \textit{hardware} desenvolvido por Rosero ligado ao capacete de um ciclista]{Protótipo de \textit{hardware} desenvolvido por Rosero ligado ao capacete de um ciclista \cite{gaidos2012}.}
+    \centerline{\includegraphics[width=18em]{figuras/rosero.png}}
+    \label{fig:rosero}
+\end{figure}
+
+\section{Conclusões}
+Neste capítulo foram apresentados trabalhos e sistemas existentes relacionados a temática e proposta do Pedal-to-Play. Um fator comum notável entre estes sistemas é que o público alvo são pessoas no geral já adeptas ao ciclismo, as quais o praticam por hábito e lazer ou como esporte. O projeto de Rosero foca no treinamento de ciclistas, usando um \textit{hardware} e \textit{software} personalizados para atender as necessidades destes e o trabalho de Cesani e Dranka é voltado para usuários que já utilizam a bicicleta como meio de locomoção em Curitiba. Nos aplicativos Strava e Runtastic, os usuários com maior visibilidade são aqueles que se dedicam integralmente ao esporte (o alto desempenho na atividade resulta em \textit{ranking} alto e vários \textit{badges}). O Pedal-to-Play por sua vez, ao se propor a trazer elementos de jogos à prática de ciclismo, foca também nas pessoas que têm mais familiaridade com \textit{video games} do que com o esporte (o exemplo clássico usado por Jane
+McGonigal (\citeyearpar{mcgonigal2011reality}) sobre o quanto as pessoas têm se dedicado aos \textit{video games} é o do jogo \textit{online} \textit{World of
+Warcraft}, ao somar todas as horas jogadas exclusivamente nele o resultado seria de 5,93 bilhões de anos, somente entre os anos de 2004 e 2011). O projeto visa  disponibilizar um ambiente cativante e motivador, também para este público não praticante envolver-se no ciclismo e torná-lo um hábito. No próximo capítulo será apresentado como a ideia do Pedal-to-Play foi projetada e desenvolvida.

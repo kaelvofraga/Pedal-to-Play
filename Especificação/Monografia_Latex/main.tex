@@ -1,0 +1,116 @@
+ % Este arquivo é uma adaptação do modelo LaTeX disponibilizado pelo UTUG (http://www.inf.ufrgs.br/utug/)
+% Autor: Prof. Dr. Adriel M. Ziesemer Jr - IFRS Canoas
+%
+% Dica: Utilize o www.sharelatex.com para editar este documento. Utilize a opcão: Upload Zipped Project
+
+%\documentclass[openright]{ifrs} % utilize openright para iniciar capítulos no anverso
+\documentclass{ifrs}
+\usepackage[T1]{fontenc}        % pacote para conj. de caracteres correto
+\usepackage[utf8]{inputenc}     % pacote para acentuaçao
+\usepackage{graphicx}           % pacote para importar figuras
+\usepackage{times}              % pacote para usar fonte Adobe Times
+\usepackage{listings}
+\usepackage{multirow}           % pacote para usagrupar células em tabelas
+\usepackage{scalefnt}           % pacote para redimensionar fontes em tabelas
+\usepackage{amsmath}
+\usepackage{rotating}           % pacote para rotacionar figuras
+\usepackage{color,graphicx}     % pacote coloração
+\usepackage{hyperref}           %links
+\usepackage{subcaption}         %subfigure environment
+\usepackage[table,xcdraw]{xcolor} %coloração de tabelas
+
+\bibliographystyle{abnt}
+
+% ensine o latex a separar em sílabas as palavras que eventualmente ele não souber
+\hyphenation{en-si-na-men-tos a-gra-de-ci-men-to de-se-nha-dos}
+
+\author{Fraga}{Kael V. de O.}
+
+% edite o definicoes.sty se precisar alterar o nome do curso
+
+\title{Pedal-to-Play: Um Sistema Web Gamificado para Monitoramento da Prática do Ciclismo}
+
+\advisor[Prof.~Me.]{Pinto}{Rafael Coimbra}
+
+\location{Canoas}{RS}
+
+% palavras-chave (começar com letra maiúscula)
+\keyword{Aplicativo de saúde e fitness}
+\keyword{Geolocalização}
+\keyword{Jogo pervasivo}
+\keyword{Mobile}
+\keyword{Web}
+
+% nominata
+\newcommand{\nominata}{
+%    \MakeUppercase{\instituicao}\\
+%    Reitor: Prof. Osvaldo Casares Pinto\\
+%    Diretor do Instituto: Prof. Dr. Mariano Nicolao\\
+%    Coordenadora do curso: Prof\textsuperscript{a}. Patrícia Nogueira %H\"{u}bler\\
+%    Bibliotecária-chefe: Sabrina Eufrasio
+}
+
+% inicio do documento
+\begin{document}
+
+% folha de rosto
+\maketitle
+
+% Dedicatoria (opcional)
+\input{source/dedicatoria.tex}
+
+% Agradecimentos (opcional)
+\input{source/agradecimentos.tex}
+
+% Resumo
+\input{source/resumo.tex}
+
+% lista de abreviações
+\input{source/abreviacoes.tex}
+
+% lista de figuras
+\listoffigures
+
+% lista de tabelas
+\listoftables
+
+% sumário
+\tableofcontents
+
+% Introdução
+\input{source/introducao.tex}
+
+% Revisao Bibliográfica
+\input{source/revisao_bibliografica.tex}
+
+% Estado da Arte
+\input{source/estado_da_arte.tex}
+
+% Desenvolvimento
+\input{source/desenvolvimento.tex}
+
+% Cronograma
+%\input{source/cronograma.tex}
+
+% Resultados
+\input{source/resultados.tex}
+
+% Conclusão
+\input{source/conclusao.tex}
+
+% carrega o arquivo com as bibliografias e põe o capítulo com as referências neste lugar
+\bibliography{bibliografia}
+
+% a partir daqui, todo capítulo novo é apêndice
+\appendix
+
+% Repositório e Versões
+\input{source/apendice.tex}
+
+%\chapter{Anexos e Apêndices}
+%Destinam-se à inclusão de informações complementares ao trabalho, mas que não %são essenciais à sua compreensão. Os Apêndices devem apresentar material %desenvolvido pelo próprio autor, formatado de acordo com as normas. Já os %Anexos destinam-se à inclusão de material como cópias de artigos, manuais, %etc., que não necessariamente precisam estar em conformidade com o modelo, e %que não foram desenvolvidos pelo autor do trabalho.
+
+%importa dicasLatexABNT.tex para o Apêndice 
+%\input{dicasLatexABNT.tex}
+
+\end{document}
